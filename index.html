@@ -311,7 +311,7 @@ to{opacity:1;transform:scale(1)}}
     <button class="menu-item" onclick="menuGoTo('cfs')"><div class="menu-item-icon" style="background:rgba(46,125,50,.2)">&#129493;</div><div class="menu-item-text"><div class="menu-item-name">Clinical Frailty Scale</div><div class="menu-item-desc">Rockwood &middot; NIV &amp; ESD implications</div></div><div class="menu-item-arrow">&#8250;</div></button>
     <button class="menu-item" onclick="menuGoTo('fa')"><div class="menu-item-icon" style="background:rgba(184,92,0,.2)">&#128203;</div><div class="menu-item-text"><div class="menu-item-name">COPD Frequent Attender</div><div class="menu-item-desc">PEARL &middot; GOLD 2025 &middot; Pre-MDT profiling</div></div><div class="menu-item-arrow">&#8250;</div></button>
       <button class="menu-item" onclick="menuGoTo('cat')"><div class="menu-item-icon" style="background:rgba(31,92,139,.2)">&#128203;</div><div class="menu-item-text"><div class="menu-item-name">CAT Score</div><div class="menu-item-desc">COPD symptom burden &middot; GOLD ABE grouping</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('abg')"><div class="menu-item-icon" style="background:rgba(15,42,74,.2)">&#129756;</div><div class="menu-item-text"><div class="menu-item-name">ABG Interpreter</div><div class="menu-item-desc">Acid-base &middot; AHRF &middot; Oxygenation</div></div><div class="menu-item-arrow">&#8250;</div></button>
+    <button class="menu-item" onclick="menuGoTo('abg')"><div class="menu-item-icon" style="background:rgba(15,42,74,.2)">💉</div><div class="menu-item-text"><div class="menu-item-name">ABG Interpreter</div><div class="menu-item-desc">Acid-base &middot; AHRF &middot; Oxygenation</div></div><div class="menu-item-arrow">&#8250;</div></button>
     <button class="menu-item" onclick="menuGoTo('decaf')"><div class="menu-item-icon" style="background:rgba(26,122,110,.2)">🫁</div><div class="menu-item-text"><div class="menu-item-name">DECAF Score</div><div class="menu-item-desc">Rapid AECOPD mortality risk &middot; ESD guide</div></div><div class="menu-item-arrow">&#8250;</div></button>
         <button class="menu-item" onclick="menuGoTo('mrc')"><div class="menu-item-icon" style="background:rgba(71,85,105,.2)">&#129695;</div><div class="menu-item-text"><div class="menu-item-name">MRC Dyspnoea Scale</div><div class="menu-item-desc">Grades 1&ndash;5 &middot; eMRCD 5a/5b &middot; DECAF &middot; ESD &amp; NIV</div></div><div class="menu-item-arrow">&#8250;</div></button>
     <button class="menu-item" onclick="menuGoTo('spiro')"><div class="menu-item-icon" style="background:rgba(46,125,50,.2)">🌬️</div><div class="menu-item-text"><div class="menu-item-name">Spirometry Interpretation</div><div class="menu-item-desc">ARTP 2020 &middot; BTS 2019 &middot; LLN vs fixed ratio</div></div><div class="menu-item-arrow">&#8250;</div></button>
@@ -362,7 +362,7 @@ to{opacity:1;transform:scale(1)}}
       <button class="tab" onclick="showTab('pe')" id="tab-pe"><span class="tab-icon">&#129978;</span><span>PE</span></button>
       <button class="tab" onclick="showTab('fa')" id="tab-fa"><span class="tab-icon">&#128203;</span><span>MDT</span></button>
       <button class="tab" onclick="showTab('cat')" id="tab-cat"><span class="tab-icon">&#128203;</span><span>CAT</span></button>
-      <button class="tab" onclick="showTab('abg')" id="tab-abg"><span class="tab-icon">&#129756;</span><span>ABG</span></button>
+      <button class="tab" onclick="showTab('abg')" id="tab-abg"><span class="tab-icon">💉</span><span>ABG</span></button>
       <button class="tab" onclick="showTab('decaf')" id="tab-decaf"><span class="tab-icon">🫁</span><span>DECAF</span></button>
       <button class="tab" onclick="showTab('mrc')" id="tab-mrc"><span class="tab-icon">&#129695;</span><span>MRC</span></button>
       <button class="tab" onclick="showTab('spiro')" id="tab-spiro"><span class="tab-icon">🌬️</span><span>Spiro</span></button>
@@ -462,7 +462,7 @@ to{opacity:1;transform:scale(1)}}
         </div>
 
                   <div class="tc" style="border-top:4px solid var(--blue)" onclick="showTab('cat')"><div class="tc-icon">&#128203;</div><div class="tc-title">CAT Score</div><div class="tc-desc">8-item COPD symptom burden score. GOLD ABE grouping, MCID tracking.</div><span class="tc-tag" style="background:var(--lblue);color:var(--blue)">Jones 2009 &middot; GOLD 2025</span><button onclick="event.stopPropagation();showTab('cat-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--navy)" onclick="showTab('abg')"><div class="tc-icon">&#129756;</div><div class="tc-title">ABG Interpreter</div><div class="tc-desc">Systematic acid-base classification, compensation, A-a gradient, P/F ratio, AHRF flag.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">Acid-base &middot; AHRF &middot; Oxygenation</span><button onclick="event.stopPropagation();showTab('abg-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
+          <div class="tc" style="border-top:4px solid var(--navy)" onclick="showTab('abg')"><div class="tc-icon">💉</div><div class="tc-title">ABG Interpreter</div><div class="tc-desc">Systematic acid-base classification, compensation, A-a gradient, P/F ratio, AHRF flag.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">Acid-base &middot; AHRF &middot; Oxygenation</span><button onclick="event.stopPropagation();showTab('abg-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
           <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('decaf')"><div class="tc-icon">🫁</div><div class="tc-title">DECAF Score</div><div class="tc-desc">Rapid standalone DECAF calculator. In-hospital mortality risk for AECOPD, ESD eligibility guide.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Steer 2012 &middot; AUC 0.82</span><button onclick="event.stopPropagation();showTab('decaf-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
           <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin:20px 0 10px">Evidence Summaries</div>
         <div class="tool-grid">
@@ -2084,7 +2084,7 @@ to{opacity:1;transform:scale(1)}}
 <div class="panel" id="panel-abg">
   <div class="panel-subhdr">
     <button class="back-home-btn" onclick="showTab('home')">&#8592;</button>
-    <h3>&#129756; ABG Interpreter</h3>
+    <h3>💉 ABG Interpreter</h3>
     <button class="panel-reset" onclick="resetABG()">&#8634; Reset</button><button class="ev-btn" onclick="showTab(\'abg-ev\')">&#128218; Ev</button>
   </div>
   <div class="panel-content">
@@ -2163,7 +2163,7 @@ to{opacity:1;transform:scale(1)}}
 <div class="panel" id="panel-abg-ev">
   <div class="panel-subhdr">
     <button class="back-home-btn" onclick="showTab('home')">&#8592;</button>
-    <h3>&#129756; ABG Interpreter &mdash; Evidence</h3>
+    <h3>💉 ABG Interpreter &mdash; Evidence</h3>
   </div>
 <div style="max-width:860px;margin:0 auto;padding:20px 16px 80px">
 <div style="background:white;border-radius:14px;padding:24px;box-shadow:0 4px 20px rgba(15,42,74,.09)">
@@ -2507,7 +2507,7 @@ to{opacity:1;transform:scale(1)}}
         <div style="font-size:11px;color:var(--slate)">Jones 2009 &middot; MCID &middot; GOLD 2025</div>
       </div>
       <div onclick="showTab('abg-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--navy);transition:all .15s">
-        <div style="font-size:18px;margin-bottom:6px">&#129756;</div>
+        <div style="font-size:18px;margin-bottom:6px">💉</div>
         <div style="font-size:13px;font-weight:700;margin-bottom:3px">ABG Interpreter</div>
         <div style="font-size:11px;color:var(--slate)">AHRF &middot; Compensation &middot; A-a gradient</div>
       </div>
@@ -3743,7 +3743,7 @@ function furtherTests(pattern, artpPattern, btsPattern, fev1pct, fvcp) {
   // Lung volumes
   var lungVols = {
     title: 'Lung Volume Measurement',
-    icon: '&#129756;',
+    icon: '💉',
     bg: 'var(--lteal)',
     border: 'var(--teal)',
     when: '',
