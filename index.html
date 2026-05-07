@@ -255,20 +255,15 @@ input[type="number"],input[type="text"],select,textarea{font-size:16px!important
 input:focus,select:focus{scroll-margin-bottom:120px}
 
 /* ── Font size scaling ───────────────────────── */
-.fs-lg  .panel-content,
-.fs-lg  .home-wrap { font-size: 16px; }
+/* Font size scaling — uses zoom to bypass inline style specificity */
+.fs-lg  .panel-content { zoom: 1.18; }
+.fs-xl  .panel-content { zoom: 1.38; }
+.fs-lg  .home-wrap     { zoom: 1.18; }
+.fs-xl  .home-wrap     { zoom: 1.38; }
 
-.fs-xl  .panel-content,
-.fs-xl  .home-wrap { font-size: 19px; }
-
-.fs-lg  .panel-content *,
-.fs-xl  .panel-content *,
-.fs-lg  .home-wrap *,
-.fs-xl  .home-wrap * { font-size: inherit; }
-
-/* Keep chrome fixed */
+/* Keep chrome fixed regardless */
 .topbar, .tabbar, .panel-subhdr, .back-home-btn,
-.panel-reset, .ev-btn, .menu-btn { font-size: 14px !important; }
+.panel-reset, .ev-btn, .menu-btn { font-size: 14px !important; zoom: 1 !important; }
 
 </style>
 </head>
