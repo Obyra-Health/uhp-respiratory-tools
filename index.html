@@ -345,6 +345,51 @@ html.fs-xl #panel-evidence [style*="font-size:11px"] { font-size: 15px !importan
 html.fs-xl #panel-evidence [style*="font-size:12px"] { font-size: 17px !important; }
 html.fs-xl #panel-evidence [style*="font-size:13px"] { font-size: 18px !important; }
 
+/* ── Padding/spacing adjustments when scaled ── */
+/* Cards and info boxes — add breathing room */
+html.fs-lg .panel-content .card-body,
+html.fs-lg .panel[id$="-ev"] .card-body { padding: 0 22px 22px !important; }
+
+html.fs-xl .panel-content .card-body,
+html.fs-xl .panel[id$="-ev"] .card-body { padding: 0 24px 24px !important; }
+
+html.fs-lg .panel-content .info,
+html.fs-lg .panel[id$="-ev"] .info { padding: 13px 16px !important; line-height: 1.7 !important; }
+
+html.fs-xl .panel-content .info,
+html.fs-xl .panel[id$="-ev"] .info { padding: 15px 18px !important; line-height: 1.8 !important; }
+
+/* Criteria rows */
+html.fs-lg .panel-content .crit { padding: 12px 15px !important; }
+html.fs-xl .panel-content .crit { padding: 14px 16px !important; }
+
+/* Table cells */
+html.fs-lg .panel-content td,
+html.fs-lg .panel[id$="-ev"] td { padding: 10px 12px !important; }
+html.fs-xl .panel-content td,
+html.fs-xl .panel[id$="-ev"] td { padding: 12px 14px !important; }
+
+html.fs-lg .panel-content th,
+html.fs-lg .panel[id$="-ev"] th { padding: 10px 12px !important; }
+html.fs-xl .panel-content th,
+html.fs-xl .panel[id$="-ev"] th { padding: 12px 14px !important; }
+
+/* Evidence note blocks */
+html.fs-lg .panel[id$="-ev"] [style*="padding:8px 10px"] { padding: 11px 13px !important; }
+html.fs-xl .panel[id$="-ev"] [style*="padding:8px 10px"] { padding: 13px 15px !important; }
+
+/* Outcome boxes */
+html.fs-lg .panel-content .outcome,
+html.fs-xl .panel-content .outcome { padding: 24px !important; }
+
+/* Strategy rows */
+html.fs-lg .panel-content .strat-body { padding: 11px 15px !important; }
+html.fs-xl .panel-content .strat-body { padding: 13px 16px !important; }
+
+/* Home cards */
+html.fs-lg .home-wrap .tc { padding: 16px !important; }
+html.fs-xl .home-wrap .tc { padding: 18px !important; }
+
 /* Never scale chrome */
 .topbar *, .tabbar *, .panel-subhdr * { font-size: inherit !important; }
 
