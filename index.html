@@ -256,32 +256,70 @@ input:focus,select:focus{scroll-margin-bottom:120px}
 
 /* ── Font size scaling ───────────────────────── */
 /* ── Font size scaling ── */
-/* Large: ~1.2x scale of common sizes */
-html.fs-lg .panel-content *,
-html.fs-lg .home-wrap * {
-  font-size: 15px !important;
-  line-height: 1.6 !important;
-}
-html.fs-lg .panel-content h2,
-html.fs-lg .home-wrap h2 { font-size: 19px !important; }
-html.fs-lg .panel-content h3,
-html.fs-lg .home-wrap h3 { font-size: 17px !important; }
+/* Target only text-bearing elements — leave layout divs alone */
+/* Large ~1.2x */
+html.fs-lg .panel-content div.cl,
+html.fs-lg .panel-content div.cd,
+html.fs-lg .panel-content div.csub,
+html.fs-lg .panel-content div.ct,
+html.fs-lg .panel-content div.evid,
+html.fs-lg .panel-content div.evid-note,
+html.fs-lg .panel-content div.info,
+html.fs-lg .panel-content div.ref-note,
+html.fs-lg .panel-content div.safety,
+html.fs-lg .panel-content td,
+html.fs-lg .panel-content th,
+html.fs-lg .panel-content label,
+html.fs-lg .panel-content p,
+html.fs-lg .panel-content li,
+html.fs-lg .panel-content span.pl,
+html.fs-lg .panel-content .strat-label,
+html.fs-lg .panel-content .strat-detail,
+html.fs-lg .panel-content .machine-row,
+html.fs-lg .panel-content .si-label,
+html.fs-lg .panel-content .tc-desc,
+html.fs-lg .panel-content .tc-title,
+html.fs-lg .home-wrap .tc-desc,
+html.fs-lg .home-wrap .tc-title { font-size: 15px !important; line-height: 1.55 !important; }
 
-/* Extra large: ~1.4x scale */
-html.fs-xl .panel-content *,
-html.fs-xl .home-wrap * {
-  font-size: 17px !important;
-  line-height: 1.7 !important;
-}
-html.fs-xl .panel-content h2,
-html.fs-xl .home-wrap h2 { font-size: 22px !important; }
-html.fs-xl .panel-content h3,
-html.fs-xl .home-wrap h3 { font-size: 20px !important; }
+html.fs-lg .panel-content h2 { font-size: 17px !important; }
+html.fs-lg .panel-content h1 { font-size: 19px !important; }
 
-/* Keep buttons and badges compact even when scaled */
-html.fs-lg .tc-tag, html.fs-xl .tc-tag { font-size: 11px !important; }
+/* Extra large ~1.4x */
+html.fs-xl .panel-content div.cl,
+html.fs-xl .panel-content div.cd,
+html.fs-xl .panel-content div.csub,
+html.fs-xl .panel-content div.ct,
+html.fs-xl .panel-content div.evid,
+html.fs-xl .panel-content div.evid-note,
+html.fs-xl .panel-content div.info,
+html.fs-xl .panel-content div.ref-note,
+html.fs-xl .panel-content div.safety,
+html.fs-xl .panel-content td,
+html.fs-xl .panel-content th,
+html.fs-xl .panel-content label,
+html.fs-xl .panel-content p,
+html.fs-xl .panel-content li,
+html.fs-xl .panel-content span.pl,
+html.fs-xl .panel-content .strat-label,
+html.fs-xl .panel-content .strat-detail,
+html.fs-xl .panel-content .machine-row,
+html.fs-xl .panel-content .si-label,
+html.fs-xl .panel-content .tc-desc,
+html.fs-xl .panel-content .tc-title,
+html.fs-xl .home-wrap .tc-desc,
+html.fs-xl .home-wrap .tc-title { font-size: 17px !important; line-height: 1.65 !important; }
 
-/* Exclude chrome from scaling */
+html.fs-xl .panel-content h2 { font-size: 20px !important; }
+html.fs-xl .panel-content h1 { font-size: 23px !important; }
+
+/* Inputs scale too so text is readable */
+html.fs-lg .panel-content input,
+html.fs-lg .panel-content select { font-size: 17px !important; }
+html.fs-xl .panel-content input,
+html.fs-xl .panel-content select { font-size: 19px !important; }
+
+/* Exclude chrome */
 .topbar *, .tabbar *, .panel-subhdr * { font-size: inherit !important; }
 
 </style>
