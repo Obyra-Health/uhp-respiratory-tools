@@ -325,60 +325,39 @@ input:focus,select:focus{scroll-margin-bottom:120px}
 <div id="menu-overlay" onclick="closeMenu(event)">
   <div class="menu-sheet">
     <div class="menu-pill"></div>
-    <div class="menu-head"><h2>All Tools</h2><button class="menu-close" onclick="closeMenu()">&#10005;</button></div>
-    <div style="padding:10px 16px 12px;border-bottom:1px solid rgba(255,255,255,.07)">
-      <div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px">Text Size</div>
-      <div style="display:flex;gap:8px">
-        <button onclick="setFS(0)" id="fs-btn-0" style="flex:1;padding:8px 0;border-radius:9px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;font-family:inherit">
-          <div style="font-size:14px;font-weight:700">A</div>
-          <div style="font-size:10px;opacity:.6;margin-top:2px">Normal</div>
+    <div class="menu-head"><h2>&#9776; Options</h2><button class="menu-close" onclick="closeMenu()">&#10005;</button></div>
+
+    <div style="padding:14px 20px">
+      <div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px">Text Size</div>
+      <div style="display:flex;gap:8px;margin-bottom:20px">
+        <button onclick="setFS(0);closeMenu()" id="fs-btn-0" style="flex:1;padding:12px 0;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;font-family:inherit">
+          <div style="font-size:15px;font-weight:700">A</div>
+          <div style="font-size:11px;opacity:.6;margin-top:3px">Normal</div>
         </button>
-        <button onclick="setFS(1)" id="fs-btn-1" style="flex:1;padding:8px 0;border-radius:9px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;font-family:inherit">
-          <div style="font-size:17px;font-weight:700">A</div>
-          <div style="font-size:10px;opacity:.6;margin-top:2px">Large</div>
+        <button onclick="setFS(1);closeMenu()" id="fs-btn-1" style="flex:1;padding:12px 0;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;font-family:inherit">
+          <div style="font-size:19px;font-weight:700">A</div>
+          <div style="font-size:11px;opacity:.6;margin-top:3px">Large</div>
         </button>
-        <button onclick="setFS(2)" id="fs-btn-2" style="flex:1;padding:8px 0;border-radius:9px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;font-family:inherit">
-          <div style="font-size:21px;font-weight:700">A</div>
-          <div style="font-size:10px;opacity:.6;margin-top:2px">Extra large</div>
+        <button onclick="setFS(2);closeMenu()" id="fs-btn-2" style="flex:1;padding:12px 0;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:white;cursor:pointer;font-family:inherit">
+          <div style="font-size:23px;font-weight:700">A</div>
+          <div style="font-size:11px;opacity:.6;margin-top:3px">Extra large</div>
         </button>
       </div>
-    </div>
-    <div class="menu-section-label">Decision Tools</div>
-    <button class="menu-item" onclick="menuGoTo('esd')"><div class="menu-item-icon" style="background:rgba(26,122,110,.2)">🫁</div><div class="menu-item-text"><div class="menu-item-name">COPD ESD</div><div class="menu-item-desc">DECAF &middot; PEARL &middot; Virtual Ward eligibility</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('niv')"><div class="menu-item-icon" style="background:rgba(31,92,139,.2)">&#128168;</div><div class="menu-item-text"><div class="menu-item-name">Acute NIV</div><div class="menu-item-desc">AHRF &middot; Hamilton C1 &middot; Bella Vista &middot; UHP SOP</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('asthma')"><div class="menu-item-icon" style="background:rgba(139,31,63,.2)">🫁</div><div class="menu-item-text"><div class="menu-item-name">Acute Asthma</div><div class="menu-item-desc">BTS/SIGN 2024 &middot; Moderate &rarr; Near-fatal</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('o2')"><div class="menu-item-icon" style="background:rgba(26,122,110,.15)">🫧</div><div class="menu-item-text"><div class="menu-item-name">Oxygen Prescriber</div><div class="menu-item-desc">BTS 2017 &middot; T2RF &middot; 88&ndash;92% vs 94&ndash;98%</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('pe')"><div class="menu-item-icon" style="background:rgba(91,76,138,.2)">&#129978;</div><div class="menu-item-text"><div class="menu-item-name">PE Risk Stratification</div><div class="menu-item-desc">Wells &middot; PERC &middot; sPESI &middot; NICE NG158</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('cfs')"><div class="menu-item-icon" style="background:rgba(46,125,50,.2)">&#129493;</div><div class="menu-item-text"><div class="menu-item-name">Clinical Frailty Scale</div><div class="menu-item-desc">Rockwood &middot; NIV &amp; ESD implications</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('fa')"><div class="menu-item-icon" style="background:rgba(184,92,0,.2)">&#128203;</div><div class="menu-item-text"><div class="menu-item-name">COPD Frequent Attender</div><div class="menu-item-desc">PEARL &middot; GOLD 2025 &middot; Pre-MDT profiling</div></div><div class="menu-item-arrow">&#8250;</div></button>
-      <button class="menu-item" onclick="menuGoTo('cat')"><div class="menu-item-icon" style="background:rgba(31,92,139,.2)">&#128203;</div><div class="menu-item-text"><div class="menu-item-name">CAT Score</div><div class="menu-item-desc">COPD symptom burden &middot; GOLD ABE grouping</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('abg')"><div class="menu-item-icon" style="background:rgba(15,42,74,.2)">💉</div><div class="menu-item-text"><div class="menu-item-name">ABG Interpreter</div><div class="menu-item-desc">Acid-base &middot; AHRF &middot; Oxygenation</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('decaf')"><div class="menu-item-icon" style="background:rgba(26,122,110,.2)">🫁</div><div class="menu-item-text"><div class="menu-item-name">DECAF Score</div><div class="menu-item-desc">Rapid AECOPD mortality risk &middot; ESD guide</div></div><div class="menu-item-arrow">&#8250;</div></button>
-        <button class="menu-item" onclick="menuGoTo('mrc')"><div class="menu-item-icon" style="background:rgba(71,85,105,.2)">&#129695;</div><div class="menu-item-text"><div class="menu-item-name">MRC Dyspnoea Scale</div><div class="menu-item-desc">Grades 1&ndash;5 &middot; eMRCD 5a/5b &middot; DECAF &middot; ESD &amp; NIV</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('spiro')"><div class="menu-item-icon" style="background:rgba(46,125,50,.2)">🌬️</div><div class="menu-item-text"><div class="menu-item-name">Spirometry Interpretation</div><div class="menu-item-desc">ARTP 2020 &middot; BTS 2019 &middot; LLN vs fixed ratio</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('ecog')"><div class="menu-item-icon" style="background:rgba(91,76,138,.2)">🚶</div><div class="menu-item-text"><div class="menu-item-name">ECOG Performance Status</div><div class="menu-item-desc">0&ndash;5 scale &middot; ESD &amp; NIV implications &middot; Oncology reference</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <div class="menu-divider"></div>
-    <div class="menu-section-label">Evidence Summaries</div>
-    <button class="menu-item" onclick="menuGoTo('evidence')"><div class="menu-item-icon" style="background:rgba(31,92,139,.2)">&#128218;</div><div class="menu-item-text"><div class="menu-item-name">Evidence Library</div><div class="menu-item-desc">All 13 evidence summaries in one place</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('esd-ev')"><div class="menu-item-icon" style="background:rgba(26,122,110,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">ESD Evidence</div><div class="menu-item-desc">DECAF &middot; PEARL &middot; Clinical confidence</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('niv-ev')"><div class="menu-item-icon" style="background:rgba(31,92,139,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">NIV Evidence</div><div class="menu-item-desc">pH &lt;7.25 nuance &middot; HFNO 2024 &middot; Weaning</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('asthma-ev')"><div class="menu-item-icon" style="background:rgba(139,31,63,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">Asthma Evidence</div><div class="menu-item-desc">BTS/SIGN 2024 &middot; MgSO&#8324; RCT</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('o2-ev')"><div class="menu-item-icon" style="background:rgba(26,122,110,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">Oxygen Evidence</div><div class="menu-item-desc">BTS 2017 &middot; Austin 2010 &middot; Hyperoxia harm</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('pe-ev')"><div class="menu-item-icon" style="background:rgba(91,76,138,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">PE Evidence</div><div class="menu-item-desc">Wells &middot; PERC &middot; sPESI &middot; NICE NG158</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('cfs-ev')"><div class="menu-item-icon" style="background:rgba(46,125,50,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">CFS Evidence</div><div class="menu-item-desc">Rockwood 2005 &middot; Frailty &amp; NIV outcomes</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('fa-ev')"><div class="menu-item-icon" style="background:rgba(184,92,0,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">MDT Evidence</div><div class="menu-item-desc">Frequent exacerbator &middot; Eosinophils &middot; PR</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('ecog-ev')"><div class="menu-item-icon" style="background:rgba(91,76,138,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">ECOG Evidence</div><div class="menu-item-desc">Oken 1982 &middot; PS &amp; treatment decisions</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('mrc-ev')"><div class="menu-item-icon" style="background:rgba(71,85,105,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">MRC Evidence</div><div class="menu-item-desc">Fletcher 1959 &middot; eMRCD &middot; DECAF</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('spiro-ev')"><div class="menu-item-icon" style="background:rgba(46,125,50,.15)">🌬️</div><div class="menu-item-text"><div class="menu-item-name">Spirometry Evidence</div><div class="menu-item-desc">ARTP 2020 &middot; BTS 2019 &middot; GLI 2012</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="<div class="menu-item-icon" style="background:rgba(46,125,50,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">ESD Evidence Summary</div><div class="menu-item-desc">DECAF &middot; PEARL &middot; Clinical confidence</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <button class="menu-item" onclick="menuGoTo('niv-ev')"><div class="menu-item-icon" style="background:rgba(91,76,138,.15)">&#128202;</div><div class="menu-item-text"><div class="menu-item-name">NIV Evidence Summary</div><div class="menu-item-desc">UHP SOP alignment &middot; 2024 updates</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <div class="menu-divider"></div>
-    <div class="menu-section-label">App</div>
-    <button class="menu-item" onclick="showIntro();closeMenu()"><div class="menu-item-icon" style="background:rgba(255,255,255,.07)">&#8505;&#65039;</div><div class="menu-item-text"><div class="menu-item-name">About &amp; Evidence Base</div><div class="menu-item-desc">Guidelines, offline use, disclaimer</div></div><div class="menu-item-arrow">&#8250;</div></button>
-    <div class="menu-footer">UHP Respiratory Clinical Tools &middot; v1.0 &middot; May 2025<br>ARAU / Respiratory Virtual Ward &middot; UHP NHS Trust</div>
 
-    <div style="margin:10px 20px 4px;padding:10px 12px;background:rgba(184,92,0,.2);border:1px solid rgba(184,92,0,.35);border-radius:9px;font-family:'DM Sans',sans-serif;font-size:11px;color:#FDE8D8;line-height:1.5">
-      &#9888;&#65039; Working draft &mdash; not approved for clinical use
+      <div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:10px">App</div>
+      <button onclick="showIntro();closeMenu()" style="display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;cursor:pointer;font-family:inherit;color:white;margin-bottom:8px">
+        <span style="font-size:18px">&#8505;&#65039;</span>
+        <span style="font-size:14px;font-weight:600">About &amp; Evidence Base</span>
+      </button>
+      <button onclick="menuGoTo('evidence')" style="display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;cursor:pointer;font-family:inherit;color:white">
+        <span style="font-size:18px">&#128218;</span>
+        <span style="font-size:14px;font-weight:600">Evidence Library</span>
+      </button>
+    </div>
+
+    <div style="margin:4px 20px 16px;padding:10px 12px;background:rgba(184,92,0,.2);border:1px solid rgba(184,92,0,.35);border-radius:9px;font-family:'DM Sans',sans-serif;font-size:11px;color:#FDE8D8;line-height:1.5">
+      &#9888;&#65039; Working draft &mdash; not yet approved for clinical use<br>
+      <span style="opacity:.7">UHP Respiratory Tools &middot; v1.0 &middot; May 2025</span>
     </div>
   </div>
 </div>
