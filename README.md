@@ -29,6 +29,7 @@ A Progressive Web App (PWA) providing evidence-based clinical decision support f
 | MRC Dyspnoea Scale | Fletcher 1959 · eMRCD · DECAF |
 | Spirometry Interpretation | ARTP 2020 · BTS 2019 · GLI 2012 · GOLD 2025 |
 | ECOG Performance Status | Oken et al 1982 · WHO |
+| Smoking & NRT | NICE NG209 2021 · NICE PH10 · Ottawa Model · Fagerström |
 
 Each tool has an accompanying evidence summary accessible within the app.
 
