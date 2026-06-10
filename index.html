@@ -2865,7 +2865,7 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
     <div style="background:var(--lblue);border-left:3px solid var(--blue);border-radius:9px;padding:11px 14px;margin-bottom:16px;font-size:13px;line-height:1.6">
       Evidence summaries for all tools. Each page lists primary sources, validation data, and key clinical applications. These are working draft summaries — for full guidelines see the source documents.
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
       <div onclick="showTab('esd-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--teal);transition:all .15s">
         <div style="font-size:18px;margin-bottom:6px">🫁</div>
         <div style="font-size:13px;font-weight:700;margin-bottom:3px">COPD ESD</div>
@@ -2931,9 +2931,58 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
         <div style="font-size:13px;font-weight:700;margin-bottom:3px">ECOG Performance Status</div>
         <div style="font-size:11px;color:var(--slate)">Oken 1982 &middot; PS &amp; treatment decisions</div>
       </div>
+      <div onclick="showTab('smoke-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid #1a1a2e;transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">&#128684;</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">Smoking &amp; NRT</div>
+        <div style="font-size:11px;color:var(--slate)">Ottawa &middot; NICE NG209 &middot; Fagerstr&ouml;m</div>
+      </div>
+      <div onclick="showTab('curb-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--rose);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">🦠</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">CURB-65</div>
+        <div style="font-size:11px;color:var(--slate)">Lim 2003 &middot; BTS CAP 2009 &middot; NICE NG138</div>
+      </div>
+      <div onclick="showTab('pleural-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid #0077B6;transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">💧</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">Light&#39;s Criteria</div>
+        <div style="font-size:11px;color:var(--slate)">Light 1972 &middot; BTS Pleural 2010 &middot; pH</div>
+      </div>
+      <div onclick="showTab('acq-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--teal);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">🌬️</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">ACQ-6 Asthma Control</div>
+        <div style="font-size:11px;color:var(--slate)">Juniper 1999 &middot; BTS/SIGN &middot; GINA 2024</div>
+      </div>
+      <div onclick="showTab('pr-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--green);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">🏃</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">Pulmonary Rehab</div>
+        <div style="font-size:11px;color:var(--slate)">NICE NG115 &middot; ATS/ERS &middot; MRC &#8805;3</div>
+      </div>
+      <div onclick="showTab('abx-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--amber);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">💊</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">CAP Antibiotics</div>
+        <div style="font-size:11px;color:var(--slate)">BTS CAP 2009 &middot; NICE NG138 &middot; BNF</div>
+      </div>
+      <div onclick="showTab('stopbang-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid #5B4C8A;transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">😴</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">Sleep / STOP-BANG</div>
+        <div style="font-size:11px;color:var(--slate)">Chung 2008 &middot; BTS Sleep 2020 &middot; OSA</div>
+      </div>
+      <div onclick="showTab('feno-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--teal);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">🔬</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">FeNO Interpretation</div>
+        <div style="font-size:11px;color:var(--slate)">ATS 2011 &middot; NICE NG80 &middot; thresholds</div>
+      </div>
+      <div onclick="showTab('drain-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--navy);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">🏥</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">Pleural Drain Safety</div>
+        <div style="font-size:11px;color:var(--slate)">BTS Pleural 2023 &middot; WHO checklist</div>
+      </div>
+      <div onclick="showTab('gold-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--blue);transition:all .15s">
+        <div style="font-size:18px;margin-bottom:6px">📊</div>
+        <div style="font-size:13px;font-weight:700;margin-bottom:3px">GOLD Staging</div>
+        <div style="font-size:11px;color:var(--slate)">GOLD 2025 &middot; ABE grouping &middot; ICS guide</div>
+      </div>
     </div>
-      <div onclick="showTab('smoke-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid #1a1a2e;transition:all .15s"><div style="font-size:18px;margin-bottom:6px">&#128684;</div><div style="font-size:13px;font-weight:700;margin-bottom:3px">Smoking &amp; NRT</div><div style="font-size:11px;color:var(--slate)">Ottawa &middot; NICE NG209 &middot; Fagerstr&ouml;m</div></div>
-          <div style="margin-top:14px;background:var(--lamber);border:1px solid var(--amber);border-radius:10px;padding:12px 14px;font-size:12px;line-height:1.6">
+    <div style="background:var(--lamber);border:1px solid var(--amber);border-radius:10px;padding:12px 14px;font-size:12px;line-height:1.6">
       <strong>&#9888;&#65039; Working draft &mdash; not yet approved for clinical use.</strong> All evidence summaries are version 1.0, May 2025. Review date June 2026. For full guidelines refer to primary sources listed in each summary.
     </div>
   </div>
@@ -4074,7 +4123,7 @@ document.getElementById('manifest-link').href = URL.createObjectURL(_mb);
 
 // Service worker
 if ('serviceWorker' in navigator) {
-  var sw = "const C='uhp-resp-v3.4';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
+  var sw = "const C='uhp-resp-v3.5';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
   navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw], {type:'application/javascript'}))).catch(function(){});
 }
 
