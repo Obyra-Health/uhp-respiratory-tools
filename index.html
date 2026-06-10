@@ -578,87 +578,165 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
             <div class="tc-title">COPD ESD Decision Tool</div>
             <div class="tc-desc">DECAF &amp; PEARL scoring, inclusion/exclusion screen, virtual ward monitoring plan.</div>
             <span class="tc-tag" style="background:var(--lteal);color:var(--teal)">DECAF &middot; PEARL &middot; VW</span>
-            <button onclick="showTab('esd-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('esd-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--blue)" onclick="showTab('niv')">
             <div class="tc-icon">&#128168;</div>
             <div class="tc-title">Acute NIV Decision Tool</div>
             <div class="tc-desc">AHRF pathway, 5-group stratification, Hamilton C1 &amp; Bella Vista settings. UHP SOP aligned.</div>
             <span class="tc-tag" style="background:var(--lblue);color:var(--blue)">AHRF &middot; Hamilton &middot; Bella Vista</span>
-            <button onclick="showTab('niv-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('niv-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--rose)" onclick="showTab('asthma')">
             <div class="tc-icon">🫁</div>
             <div class="tc-title">Acute Asthma Severity</div>
             <div class="tc-desc">BTS/SIGN 2024 severity classification. Moderate to near-fatal. MgSO&#8324; and ITU escalation.</div>
             <span class="tc-tag" style="background:var(--lrose);color:var(--rose)">BTS/SIGN 2024</span>
-            <button onclick="showTab('asthma-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('asthma-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('o2')">
             <div class="tc-icon">🫧</div>
             <div class="tc-title">Oxygen Therapy Prescriber</div>
             <div class="tc-desc">T2RF risk assessment, device selection, SpO&#8322; targets. BTS Emergency Oxygen 2017.</div>
             <span class="tc-tag" style="background:var(--lteal);color:var(--teal)">BTS 2017 &middot; 88&ndash;92%</span>
-            <button onclick="showTab('o2-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('o2-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid #5B4C8A" onclick="showTab('pe')">
             <div class="tc-icon">&#129978;</div>
             <div class="tc-title">PE Risk Stratification</div>
             <div class="tc-desc">Wells score, PERC rule, sPESI post-diagnosis. Investigation and disposition guidance.</div>
             <span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Wells &middot; PERC &middot; sPESI</span>
-            <button onclick="showTab('pe-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('pe-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--green)" onclick="showTab('cfs')">
             <div class="tc-icon">&#129493;</div>
             <div class="tc-title">Clinical Frailty Scale</div>
             <div class="tc-desc">Interactive CFS scorer with NIV and ESD implications for each score. BGS 2020.</div>
             <span class="tc-tag" style="background:var(--lgreen);color:var(--green)">Rockwood &middot; NIV &middot; ESD</span>
-            <button onclick="showTab('cfs-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('cfs-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--amber)" onclick="showTab('fa')">
             <div class="tc-icon">&#128203;</div>
             <div class="tc-title">COPD Frequent Attender</div>
             <div class="tc-desc">Pre-MDT risk profile for &ge;2 AECOPD admissions. Clinical, social, pathway factors.</div>
             <span class="tc-tag" style="background:var(--lamber);color:var(--amber)">PEARL &middot; GOLD 2025</span>
-            <button onclick="showTab('fa-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('fa-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid #5B4C8A" onclick="showTab('ecog')">
             <div class="tc-icon">🚶</div>
             <div class="tc-title">ECOG Performance Status</div>
             <div class="tc-desc">0&ndash;5 functional scale with ESD, NIV and oncology implications. ECOG vs CFS reference.</div>
             <span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Oken 1982 &middot; WHO</span>
-            <button onclick="showTab('ecog-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('ecog-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--slate)" onclick="showTab('mrc')">
             <div class="tc-icon">&#129695;</div>
             <div class="tc-title">MRC Dyspnoea Scale</div>
             <div class="tc-desc">Grades 1&ndash;5 with eMRCD 5a/5b. DECAF contribution, GOLD staging, ESD and NIV implications.</div>
             <span class="tc-tag" style="background:var(--mist);color:var(--slate)">Fletcher 1959 &middot; DECAF</span>
-            <button onclick="showTab('mrc-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('mrc-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid #2E7D32" onclick="showTab('spiro')">
             <div class="tc-icon">📊</div>
             <div class="tc-title">Spirometry Interpretation</div>
             <div class="tc-desc">ARTP 2020 (LLN) and BTS 2019 / GOLD 2025 (fixed 0.70) criteria side by side. GLI reference.</div>
             <span class="tc-tag" style="background:var(--lgreen);color:#2E7D32">ARTP 2020 &middot; BTS 2019 &middot; GLI</span>
-            <button onclick="showTab('spiro-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+            <button onclick="event.stopPropagation();showTab('spiro-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--blue)" onclick="showTab('cat')">
+            <div class="tc-icon">&#128203;</div>
+            <div class="tc-title">CAT Score</div>
+            <div class="tc-desc">8-item COPD symptom burden score. GOLD ABE grouping, MCID tracking.</div>
+            <span class="tc-tag" style="background:var(--lblue);color:var(--blue)">Jones 2009 &middot; GOLD 2025</span>
+            <button onclick="event.stopPropagation();showTab('cat-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--navy)" onclick="showTab('abg')">
+            <div class="tc-icon">💉</div>
+            <div class="tc-title">ABG Interpreter</div>
+            <div class="tc-desc">Systematic acid-base classification, compensation, A-a gradient, P/F ratio, AHRF flag.</div>
+            <span class="tc-tag" style="background:var(--mist);color:var(--navy)">Acid-base &middot; AHRF &middot; Oxygenation</span>
+            <button onclick="event.stopPropagation();showTab('abg-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('decaf')">
+            <div class="tc-icon">🫁</div>
+            <div class="tc-title">DECAF Score</div>
+            <div class="tc-desc">Rapid standalone DECAF calculator. In-hospital mortality risk for AECOPD, ESD eligibility guide.</div>
+            <span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Steer 2012 &middot; AUC 0.82</span>
+            <button onclick="event.stopPropagation();showTab('decaf-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid #1a1a2e" onclick="showTab('smoke')">
+            <div class="tc-icon">&#128684;</div>
+            <div class="tc-title">Smoking &amp; NRT</div>
+            <div class="tc-desc">Pack year calculator, Fagerstr&ouml;m dependence score, NRT dosing, Ottawa Model framework.</div>
+            <span class="tc-tag" style="background:var(--mist);color:#1a1a2e">NICE NG209 &middot; Ottawa &middot; Fagerstr&ouml;m</span>
+            <button onclick="event.stopPropagation();showTab('smoke-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--rose)" onclick="showTab('curb')">
+            <div class="tc-icon">🦠</div>
+            <div class="tc-title">CURB-65</div>
+            <div class="tc-desc">CAP severity scoring. Admission vs discharge decision, HDU escalation threshold, antibiotic guidance link.</div>
+            <span class="tc-tag" style="background:var(--lrose);color:var(--rose)">Lim 2003 &middot; BTS 2009 &middot; NICE NG138</span>
+            <button onclick="event.stopPropagation();showTab('curb-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid #0077B6" onclick="showTab('pleural')">
+            <div class="tc-icon">💧</div>
+            <div class="tc-title">Pleural Fluid Interpreter</div>
+            <div class="tc-desc">Light's criteria for exudate vs transudate. pH, glucose, LDH interpretation. Empyema and malignant effusion criteria.</div>
+            <span class="tc-tag" style="background:#E0F4FF;color:#0077B6">Light 1972 &middot; BTS 2010</span>
+            <button onclick="event.stopPropagation();showTab('pleural-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('acq')">
+            <div class="tc-icon">🌬️</div>
+            <div class="tc-title">Asthma Control (RCP3 / ACQ)</div>
+            <div class="tc-desc">RCP 3 Questions and ACQ-6. Asthma control classification, biologic eligibility flag, step-up trigger.</div>
+            <span class="tc-tag" style="background:var(--lteal);color:var(--teal)">NICE NG80 &middot; RCP 2003 &middot; BTS/SIGN 2024</span>
+            <button onclick="event.stopPropagation();showTab('acq-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--green)" onclick="showTab('pr')">
+            <div class="tc-icon">🏃</div>
+            <div class="tc-title">Pulmonary Rehabilitation Referral</div>
+            <div class="tc-desc">NACAP/BTS eligibility criteria. MRC, post-exacerbation flag, contraindications, NACAP discharge bundle.</div>
+            <span class="tc-tag" style="background:var(--lgreen);color:var(--green)">BTS 2013 &middot; NACAP 2019 &middot; GOLD 2025</span>
+            <button onclick="event.stopPropagation();showTab('pr-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--amber)" onclick="showTab('abx')">
+            <div class="tc-icon">💊</div>
+            <div class="tc-title">CAP Antibiotic Pathway</div>
+            <div class="tc-desc">CURB-65-linked empirical antibiotic selection. Low/moderate/high severity tiers. UHP local formulary aligned.</div>
+            <span class="tc-tag" style="background:var(--lamber);color:var(--amber)">BTS 2009 &middot; UHP Formulary &middot; NICE NG138</span>
+            <button onclick="event.stopPropagation();showTab('abx-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid #5B4C8A" onclick="showTab('stopbang')">
+            <div class="tc-icon">😴</div>
+            <div class="tc-title">Sleep Assessment</div>
+            <div class="tc-desc">STOP-BANG OSA screening + Epworth Sleepiness Scale. Combined risk, symptom severity, DVLA implications, OHS flag.</div>
+            <span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Chung 2008 &middot; Johns 1991 &middot; NICE CG89</span>
+            <button onclick="event.stopPropagation();showTab('stopbang-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('feno')">
+            <div class="tc-icon">🔬</div>
+            <div class="tc-title">FeNO Interpretation</div>
+            <div class="tc-desc">NICE NG80 thresholds. T2 inflammation assessment, ICS adherence context, biologic eligibility signposting.</div>
+            <span class="tc-tag" style="background:var(--lteal);color:var(--teal)">NICE NG80 &middot; ATS 2011 &middot; BTS/SIGN 2024</span>
+            <button onclick="event.stopPropagation();showTab('feno-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--navy)" onclick="showTab('drain')">
+            <div class="tc-icon">🏥</div>
+            <div class="tc-title">Chest Drain Safety Checklist</div>
+            <div class="tc-desc">Pre-procedure, insertion and post-procedure checks. BTS safety standards. Complication recognition guide.</div>
+            <span class="tc-tag" style="background:var(--mist);color:var(--navy)">BTS 2010 &middot; BTS 2023 &middot; NPSA</span>
+            <button onclick="event.stopPropagation();showTab('drain-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
+          </div>
+          <div class="tc" style="border-top:4px solid var(--blue)" onclick="showTab('gold')">
+            <div class="tc-icon">📊</div>
+            <div class="tc-title">GOLD Staging Calculator</div>
+            <div class="tc-desc">GOLD ABE group from FEV&#8321;%, MRC, CAT and exacerbation history. Recommended inhaler therapy step.</div>
+            <span class="tc-tag" style="background:var(--lblue);color:var(--blue)">GOLD 2025 &middot; NICE NG115</span>
+            <button onclick="event.stopPropagation();showTab('gold-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
         </div>
 
-                  <div class="tc" style="border-top:4px solid var(--blue)" onclick="showTab('cat')"><div class="tc-icon">&#128203;</div><div class="tc-title">CAT Score</div><div class="tc-desc">8-item COPD symptom burden score. GOLD ABE grouping, MCID tracking.</div><span class="tc-tag" style="background:var(--lblue);color:var(--blue)">Jones 2009 &middot; GOLD 2025</span><button onclick="event.stopPropagation();showTab('cat-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--navy)" onclick="showTab('abg')"><div class="tc-icon">💉</div><div class="tc-title">ABG Interpreter</div><div class="tc-desc">Systematic acid-base classification, compensation, A-a gradient, P/F ratio, AHRF flag.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">Acid-base &middot; AHRF &middot; Oxygenation</span><button onclick="event.stopPropagation();showTab('abg-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('decaf')"><div class="tc-icon">🫁</div><div class="tc-title">DECAF Score</div><div class="tc-desc">Rapid standalone DECAF calculator. In-hospital mortality risk for AECOPD, ESD eligibility guide.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Steer 2012 &middot; AUC 0.82</span><button onclick="event.stopPropagation();showTab('decaf-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-                    <div class="tc" style="border-top:4px solid #1a1a2e" onclick="showTab('smoke')"><div class="tc-icon">&#128684;</div><div class="tc-title">Smoking &amp; NRT</div><div class="tc-desc">Pack year calculator, Fagerström dependence score, NRT dosing, Ottawa Model framework.</div><span class="tc-tag" style="background:var(--mist);color:#1a1a2e">NICE NG209 &middot; Ottawa &middot; Fagerström</span><button onclick="event.stopPropagation();showTab('smoke-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--rose)" onclick="showTab('curb')"><div class="tc-icon">🦠</div><div class="tc-title">CURB-65</div><div class="tc-desc">CAP severity scoring. Admission vs discharge decision, HDU escalation threshold, antibiotic guidance link.</div><span class="tc-tag" style="background:var(--lrose);color:var(--rose)">Lim 2003 &middot; BTS 2009 &middot; NICE NG138</span><button onclick="event.stopPropagation();showTab('curb-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid #0077B6" onclick="showTab('pleural')"><div class="tc-icon">💧</div><div class="tc-title">Pleural Fluid Interpreter</div><div class="tc-desc">Light's criteria for exudate vs transudate. pH, glucose, LDH interpretation. Empyema and malignant effusion criteria.</div><span class="tc-tag" style="background:#E0F4FF;color:#0077B6">Light 1972 &middot; BTS 2010</span><button onclick="event.stopPropagation();showTab('pleural-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('acq')"><div class="tc-icon">🌬️</div><div class="tc-title">Asthma Control (RCP3 / ACQ)</div><div class="tc-desc">RCP 3 Questions and ACQ-6. Asthma control classification, biologic eligibility flag, step-up trigger.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">NICE NG80 &middot; RCP 2003 &middot; BTS/SIGN 2024</span><button onclick="event.stopPropagation();showTab('acq-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--green)" onclick="showTab('pr')"><div class="tc-icon">🏃</div><div class="tc-title">Pulmonary Rehabilitation Referral</div><div class="tc-desc">NACAP/BTS eligibility criteria. MRC, post-exacerbation flag, contraindications, NACAP discharge bundle.</div><span class="tc-tag" style="background:var(--lgreen);color:var(--green)">BTS 2013 &middot; NACAP 2019 &middot; GOLD 2025</span><button onclick="event.stopPropagation();showTab('pr-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--amber)" onclick="showTab('abx')"><div class="tc-icon">💊</div><div class="tc-title">CAP Antibiotic Pathway</div><div class="tc-desc">CURB-65-linked empirical antibiotic selection. Low/moderate/high severity tiers. UHP local formulary aligned.</div><span class="tc-tag" style="background:var(--lamber);color:var(--amber)">BTS 2009 &middot; UHP Formulary &middot; NICE NG138</span><button onclick="event.stopPropagation();showTab('abx-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid #5B4C8A" onclick="showTab('stopbang')"><div class="tc-icon">😴</div><div class="tc-title">Sleep Assessment</div><div class="tc-desc">STOP-BANG OSA screening + Epworth Sleepiness Scale. Combined risk, symptom severity, DVLA implications, OHS flag.</div><span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Chung 2008 &middot; Johns 1991 &middot; NICE CG89</span><button onclick="event.stopPropagation();showTab('stopbang-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('feno')"><div class="tc-icon">🔬</div><div class="tc-title">FeNO Interpretation</div><div class="tc-desc">NICE NG80 thresholds. T2 inflammation assessment, ICS adherence context, biologic eligibility signposting.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">NICE NG80 &middot; ATS 2011 &middot; BTS/SIGN 2024</span><button onclick="event.stopPropagation();showTab('feno-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--navy)" onclick="showTab('drain')"><div class="tc-icon">🏥</div><div class="tc-title">Chest Drain Safety Checklist</div><div class="tc-desc">Pre-procedure, insertion and post-procedure checks. BTS safety standards. Complication recognition guide.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">BTS 2010 &middot; BTS 2023 &middot; NPSA</span><button onclick="event.stopPropagation();showTab('drain-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div class="tc" style="border-top:4px solid var(--blue)" onclick="showTab('gold')"><div class="tc-icon">📊</div><div class="tc-title">GOLD Staging Calculator</div><div class="tc-desc">GOLD ABCD/ABCE group. FEV₁%, MRC, CAT, exacerbation history → group + recommended inhaler step.</div><span class="tc-tag" style="background:var(--lblue);color:var(--blue)">GOLD 2025</span><button onclick="event.stopPropagation();showTab('gold-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button></div>
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin:20px 0 10px">Evidence Summaries</div>
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--slate);margin:20px 0 10px">Evidence Summaries</div>
         <div class="tool-grid">
           <div class="tc" style="border-top:4px solid var(--teal);opacity:.9" onclick="showTab('esd-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">ESD Evidence</div><div class="tc-desc">DECAF, PEARL, inclusion/exclusion criteria evidence base.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--blue);opacity:.9" onclick="showTab('niv-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">NIV Evidence</div><div class="tc-desc">UHP SOP alignment, pH &lt;7.25 nuance, HFNO 2024, weaning.</div><span class="tc-tag" style="background:var(--lblue);color:var(--blue)">Evidence</span></div>
@@ -670,16 +748,23 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
           <div class="tc" style="border-top:4px solid #5B4C8A;opacity:.9" onclick="showTab('ecog-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">ECOG Evidence</div><div class="tc-desc">Oken 1982, PS and chemotherapy, functional status and NIV.</div><span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--slate);opacity:.9" onclick="showTab('mrc-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">MRC Evidence</div><div class="tc-desc">Fletcher 1959, eMRCD/DECAF, pulmonary rehab threshold.</div><span class="tc-tag" style="background:var(--mist);color:var(--slate)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid #2E7D32;opacity:.9" onclick="showTab('spiro-ev')"><div class="tc-icon">📊</div><div class="tc-title">Spirometry Evidence</div><div class="tc-desc">ARTP 2020, BTS 2019, GLI 2012, LLN vs fixed ratio.</div><span class="tc-tag" style="background:var(--lgreen);color:#2E7D32">Evidence</span></div>
-        </div>
-
           <div class="tc" style="border-top:4px solid var(--blue);opacity:.9" onclick="showTab('cat-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">CAT Evidence</div><div class="tc-desc">Jones 2009, MCID, GOLD ABE threshold.</div><span class="tc-tag" style="background:var(--lblue);color:var(--blue)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--navy);opacity:.9" onclick="showTab('abg-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">ABG Evidence</div><div class="tc-desc">AHRF, compensation formulas, A-a gradient, lactate.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--teal);opacity:.9" onclick="showTab('decaf-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">DECAF Evidence</div><div class="tc-desc">Steer 2012, validation, eMRCD importance, vs PEARL.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid #1a1a2e;opacity:.9" onclick="showTab('smoke-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Smoking &amp; NRT Evidence</div><div class="tc-desc">Ottawa Model, NICE NG209, Fagerstr&ouml;m, NRT efficacy, varenicline.</div><span class="tc-tag" style="background:var(--mist);color:#1a1a2e">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--rose);opacity:.9" onclick="showTab('curb-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">CURB-65 Evidence</div><div class="tc-desc">Lim 2003 validation, BTS CAP 2009, NICE NG138 mortality data.</div><span class="tc-tag" style="background:var(--lrose);color:var(--rose)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid #0077B6;opacity:.9" onclick="showTab('pleural-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Pleural Evidence</div><div class="tc-desc">Light 1972 criteria, BTS 2010 guidelines, pH in parapneumonic effusion.</div><span class="tc-tag" style="background:#E0F4FF;color:#0077B6">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--teal);opacity:.9" onclick="showTab('acq-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Asthma Control Evidence</div><div class="tc-desc">RCP 3Q 2003, ACQ Juniper 1999, NICE NG80, biologic criteria.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--green);opacity:.9" onclick="showTab('pr-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">PR Evidence</div><div class="tc-desc">BTS PR 2013, NACAP 2019 outcomes, Puhan Cochrane 2016.</div><span class="tc-tag" style="background:var(--lgreen);color:var(--green)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--amber);opacity:.9" onclick="showTab('abx-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">CAP Antibiotics Evidence</div><div class="tc-desc">BTS CAP 2009, NICE NG138, de-escalation and duration evidence.</div><span class="tc-tag" style="background:var(--lamber);color:var(--amber)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid #5B4C8A;opacity:.9" onclick="showTab('stopbang-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Sleep Evidence</div><div class="tc-desc">Chung 2008 STOP-BANG, Johns 1991 ESS, DVLA 2023, NICE CG89.</div><span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--teal);opacity:.9" onclick="showTab('feno-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">FeNO Evidence</div><div class="tc-desc">NICE NG80 2017, ATS 2011, dupilumab TA776, BTS/SIGN 2024.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--navy);opacity:.9" onclick="showTab('drain-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Chest Drain Evidence</div><div class="tc-desc">BTS 2010 pleural guidelines, BTS 2023 drain guidance, NPSA safety standards.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--blue);opacity:.9" onclick="showTab('gold-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">GOLD Evidence</div><div class="tc-desc">GOLD 2025, ABE grouping 2023, NICE NG115, eosinophil thresholds.</div><span class="tc-tag" style="background:var(--lblue);color:var(--blue)">Evidence</span></div>
         </div>
 
-                  <div class="tc" style="border-top:4px solid #1a1a2e;opacity:.9" onclick="showTab('smoke-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Smoking &amp; NRT Evidence</div><div class="tc-desc">Ottawa Model, NICE NG209, Fagerstr&ouml;m, NRT efficacy, varenicline.</div><span class="tc-tag" style="background:var(--mist);color:#1a1a2e">Evidence</span></div>
         <div class="disclaimer"><strong>&#9888;&#65039; Working draft &mdash; not yet approved for clinical use.</strong> These tools require consultant review before implementation. They support but do not replace clinical judgement. Version 1.0 &middot; May 2025 &middot; Review date June 2026.</div>
-      </div></div>
+      </div>
     </div>
 
     <!-- ESD -->
@@ -3982,7 +4067,7 @@ document.getElementById('manifest-link').href = URL.createObjectURL(_mb);
 
 // Service worker
 if ('serviceWorker' in navigator) {
-  var sw = "const C='uhp-resp-v3.1';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
+  var sw = "const C='uhp-resp-v3.2';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
   navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw], {type:'application/javascript'}))).catch(function(){});
 }
 
