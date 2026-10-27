@@ -702,8 +702,8 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
           <div class="tc" style="border-top:4px solid var(--amber)" onclick="showTab('abx')">
             <div class="tc-icon">💊</div>
             <div class="tc-title">CAP Antibiotic Pathway</div>
-            <div class="tc-desc">CURB-65-linked empirical antibiotic selection. Low/moderate/high severity tiers. UHP local formulary aligned.</div>
-            <span class="tc-tag" style="background:var(--lamber);color:var(--amber)">BTS 2009 &middot; UHP Formulary &middot; NICE NG138</span>
+            <div class="tc-desc">CURB-65-linked empirical antibiotic selection aligned to South &amp; West Devon Formulary (NICE NG250). 5-day courses, steroids in high severity.</div>
+            <span class="tc-tag" style="background:var(--lamber);color:var(--amber)">NICE NG250 &middot; S&amp;W Formulary</span>
             <button onclick="event.stopPropagation();showTab('abx-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid #5B4C8A" onclick="showTab('stopbang')">
@@ -756,7 +756,7 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
           <div class="tc" style="border-top:4px solid #0077B6;opacity:.9" onclick="showTab('pleural-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Pleural Evidence</div><div class="tc-desc">Light 1972 criteria, BTS 2010 guidelines, pH in parapneumonic effusion.</div><span class="tc-tag" style="background:#E0F4FF;color:#0077B6">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--teal);opacity:.9" onclick="showTab('acq-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Asthma Control Evidence</div><div class="tc-desc">RCP 3Q 2003, ACQ Juniper 1999, NICE NG80, biologic criteria.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--green);opacity:.9" onclick="showTab('pr-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">PR Evidence</div><div class="tc-desc">BTS PR 2013, NACAP 2019 outcomes, Puhan Cochrane 2016.</div><span class="tc-tag" style="background:var(--lgreen);color:var(--green)">Evidence</span></div>
-          <div class="tc" style="border-top:4px solid var(--amber);opacity:.9" onclick="showTab('abx-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">CAP Antibiotics Evidence</div><div class="tc-desc">BTS CAP 2009, NICE NG138, de-escalation and duration evidence.</div><span class="tc-tag" style="background:var(--lamber);color:var(--amber)">Evidence</span></div>
+          <div class="tc" style="border-top:4px solid var(--amber);opacity:.9" onclick="showTab('abx-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">CAP Antibiotics Evidence</div><div class="tc-desc">NICE NG250, S&amp;W Formulary, steroids, duration and de-escalation evidence.</div><span class="tc-tag" style="background:var(--lamber);color:var(--amber)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid #5B4C8A;opacity:.9" onclick="showTab('stopbang-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Sleep Evidence</div><div class="tc-desc">Chung 2008 STOP-BANG, Johns 1991 ESS, DVLA 2023, NICE CG89.</div><span class="tc-tag" style="background:var(--lpurp);color:#5B4C8A">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--teal);opacity:.9" onclick="showTab('feno-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">FeNO Evidence</div><div class="tc-desc">NICE NG80 2017, ATS 2011, dupilumab TA776, BTS/SIGN 2024.</div><span class="tc-tag" style="background:var(--lteal);color:var(--teal)">Evidence</span></div>
           <div class="tc" style="border-top:4px solid var(--navy);opacity:.9" onclick="showTab('drain-ev')"><div class="tc-icon">&#128202;</div><div class="tc-title">Chest Drain Evidence</div><div class="tc-desc">BTS 2010 pleural guidelines, BTS 2023 drain guidance, NPSA safety standards.</div><span class="tc-tag" style="background:var(--mist);color:var(--navy)">Evidence</span></div>
@@ -2959,7 +2959,7 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
       <div onclick="showTab('abx-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid var(--amber);transition:all .15s">
         <div style="font-size:18px;margin-bottom:6px">💊</div>
         <div style="font-size:13px;font-weight:700;margin-bottom:3px">CAP Antibiotics</div>
-        <div style="font-size:11px;color:var(--slate)">BTS CAP 2009 &middot; NICE NG138 &middot; BNF</div>
+        <div style="font-size:11px;color:var(--slate)">NICE NG250 &middot; S&amp;W Formulary &middot; BNF</div>
       </div>
       <div onclick="showTab('stopbang-ev')" style="background:white;border-radius:12px;padding:14px;cursor:pointer;box-shadow:0 2px 8px rgba(15,42,74,.08);border-top:3px solid #5B4C8A;transition:all .15s">
         <div style="font-size:18px;margin-bottom:6px">😴</div>
@@ -3201,8 +3201,8 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
   </div>
   <div class="panel-content">
     <div style="background:var(--lamber);border-left:3px solid var(--amber);border-radius:9px;padding:12px 14px;margin-bottom:14px;font-size:13px;line-height:1.6">
-      <strong>&#9888;&#65039; Always check current UHP/Southwest antimicrobial formulary before prescribing.</strong> Allergy status and recent cultures must be reviewed. Consult microbiology for complex cases.
-      <br><span style="font-size:11px;font-style:italic">BTS CAP Guideline 2009 &middot; NICE NG138 2019 &middot; UHP Local Antimicrobial Policy</span>
+      <strong>&#9888;&#65039; Aligned to the South &amp; West Devon Formulary, which follows NICE NG250 for CAP.</strong> Check UHP Microguide for inpatient specifics. Review allergy history, pregnancy, renal function and previous cultures. Consult microbiology for complex cases.
+      <br><span style="font-size:11px;font-style:italic">NICE NG250 (2025) &middot; South &amp; West Devon Formulary &middot; UHP Microguide</span>
     </div>
     <div style="background:white;border-radius:14px;padding:18px;box-shadow:0 2px 12px rgba(15,42,74,.08);margin-bottom:14px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
@@ -3212,17 +3212,20 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
           </select></div>
         <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Penicillin allergy</label>
           <select id="abx-allergy" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;background:white;font-family:inherit" onchange="abxCalc()">
-            <option value="none">No allergy</option><option value="mild">Mild / non-anaphylactic reaction</option><option value="severe">Severe / anaphylaxis</option>
+            <option value="none">No allergy</option><option value="yes">Penicillin allergy</option>
           </select></div>
       </div>
+      <div style="font-size:11px;color:var(--slate);margin:-4px 0 12px">Clinical judgement takes precedence where CURB-65 does not match the overall assessment.</div>
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
-        <div class="crit" id="abx-atypical" onclick="abxToggleCrit('atypical')"><div class="cbox" id="abx-cb-atypical"></div><div class="ct"><div class="cl">Features suggesting atypical organism</div><div class="cd">Gradual onset, dry cough, extrapulmonary features, younger patient, travel, bilateral infiltrates.</div></div></div>
-        <div class="crit" id="abx-aspiration" onclick="abxToggleCrit('aspiration')"><div class="cbox" id="abx-cb-aspiration"></div><div class="ct"><div class="cl">Aspiration pneumonia suspected</div><div class="cd">Dysphagia, witnessed aspiration, lower lobe predominance, impaired consciousness.</div></div></div>
-        <div class="crit" id="abx-hcap" onclick="abxToggleCrit('hcap')"><div class="cbox" id="abx-cb-hcap"></div><div class="ct"><div class="cl">Healthcare-associated or recent hospitalisation (&lt;90 days)</div></div></div>
+        <div class="crit" id="abx-atypical" onclick="abxToggleCrit('atypical')"><div class="cbox" id="abx-cb-atypical"></div><div class="ct"><div class="cl">Atypical pathogens suspected</div><div class="cd">Gradual onset, dry cough, extrapulmonary features, younger patient, travel, bilateral infiltrates, local Mycoplasma activity.</div></div></div>
+        <div class="crit" id="abx-pregnant" onclick="abxToggleCrit('pregnant')"><div class="cbox" id="abx-cb-pregnant"></div><div class="ct"><div class="cl">Pregnant</div><div class="cd">Erythromycin is the preferred macrolide; avoid doxycycline.</div></div></div>
+        <div class="crit" id="abx-iv" onclick="abxToggleCrit('iv')"><div class="cbox" id="abx-cb-iv"></div><div class="ct"><div class="cl">Unable to take oral / IV therapy needed</div></div></div>
+        <div class="crit" id="abx-aspiration" onclick="abxToggleCrit('aspiration')"><div class="cbox" id="abx-cb-aspiration"></div><div class="ct"><div class="cl">Aspiration suspected</div><div class="cd">Dysphagia, witnessed aspiration, impaired consciousness.</div></div></div>
+        <div class="crit" id="abx-resistant" onclick="abxToggleCrit('resistant')"><div class="cbox" id="abx-cb-resistant"></div><div class="ct"><div class="cl">Recent hospitalisation or previous resistant organism</div><div class="cd">e.g. Pseudomonas, ESBL or MRSA on previous cultures.</div></div></div>
       </div>
     </div>
     <div id="abx-outcome" class="hidden"></div>
-    <div style="font-size:11px;color:var(--slate);font-style:italic;padding:8px 0">Always check current UHP formulary via <strong>COMPASS/Microguide</strong>. Review allergy, renal function, and de-escalate at 48h with cultures.</div>
+    <div style="font-size:11px;color:var(--slate);font-style:italic;padding:8px 0">Check BNF for renal/hepatic dosing and IV administration. Review IV antibiotics by 48h and switch to oral where possible.</div>
   </div>
 </div>
 
@@ -3563,43 +3566,66 @@ window.prCalc=function(){
 window.prReset=function(){Object.keys(prState).forEach(function(k){prState[k]=false;var el=document.getElementById(k),box=document.getElementById(k.replace('pr-','pr-cb-'));if(el){el.classList.remove('checked','fail');}if(box)box.textContent='';});var d=document.getElementById('pr-days');if(d)d.value='';var out=document.getElementById('pr-outcome');out.classList.add('hidden');out.innerHTML='';panelTop('panel-pr');};
 
 // ── CAP ANTIBIOTIC
-var abxCritState={atypical:false,aspiration:false,hcap:false};
+var abxCritState={atypical:false,pregnant:false,iv:false,aspiration:false,resistant:false};
 window.abxToggleCrit=function(k){abxCritState[k]=!abxCritState[k];var el=document.getElementById('abx-'+k),box=document.getElementById('abx-cb-'+k);if(abxCritState[k]){el.classList.add('checked');box.textContent='✓';}else{el.classList.remove('checked');box.textContent='';}abxCalc();};
 window.abxCalc=function(){
-  var curb=parseInt(document.getElementById('abx-curb').value),allergy=document.getElementById('abx-allergy').value;
+  var curb=parseInt(document.getElementById('abx-curb').value),pen=document.getElementById('abx-allergy').value==='yes';
   if(isNaN(curb))return;
-  var out=document.getElementById('abx-outcome'),atypical=abxCritState.atypical,aspiration=abxCritState.aspiration,hcap=abxCritState.hcap;
-  var sevLabel,sevCol,sevBg,first='',second='',duration='5 days',notes='';
-  if(curb<=1){sevLabel='Low severity (CURB-65 0–1)';sevCol='var(--green)';sevBg='var(--lgreen)';}
+  var c=abxCritState,out=document.getElementById('abx-outcome');
+  var DOXY='Doxycycline 200mg PO on day 1, then 100mg OD (days 2&ndash;5)',CLARI='Clarithromycin 500mg BD',ERY='Erythromycin 500mg QDS PO';
+  var sevLabel,sevCol,sevBg,first='',alt='',extra=[],flags=[],place='',micro='';
+  if(curb<=1){sevLabel='Low severity (CURB-65 0&ndash;1)';sevCol='var(--green)';sevBg='var(--lgreen)';}
   else if(curb===2){sevLabel='Moderate severity (CURB-65 2)';sevCol='var(--amber)';sevBg='var(--lamber)';}
-  else{sevLabel='High severity (CURB-65 3–5)';sevCol='var(--rose)';sevBg='var(--lrose)';}
-  if(aspiration){
-    first=allergy==='severe'?'Clindamycin 600mg TDS IV/PO':'Co-amoxiclav 1.2g TDS IV &rarr; 625mg TDS PO';second='Add metronidazole 400mg TDS if inadequate anaerobic cover';duration='5–7 days';notes='Anaerobic cover essential. Early physio for airway clearance. Swallowing assessment.';
-  }else if(hcap){
-    first=allergy==='severe'?'Meropenem 500mg–1g TDS IV &#177; vancomycin if MRSA risk':'Piperacillin/tazobactam 4.5g QDS IV &#177; vancomycin if MRSA risk';second='Discuss with microbiology. Send cultures before starting.';duration='7–10 days';notes='Broader empirical cover required. Microbiological advice recommended.';
-  }else if(curb<=1){
-    if(allergy==='severe'){first='Doxycycline 200mg loading then 100mg OD PO';second=atypical?'Already covered by doxycycline':'Consider clarithromycin 500mg BD if doxycycline intolerant';}
-    else{first='Amoxicillin 500mg TDS PO';second=atypical?'+ Clarithromycin 500mg BD PO (atypical cover)':'Add clarithromycin if atypical features present';}
-    duration='5 days';
+  else{sevLabel='High severity (CURB-65 3&ndash;5)';sevCol='var(--rose)';sevBg='var(--lrose)';}
+
+  if(curb<=1){
+    if(pen||c.atypical){
+      if(c.pregnant){first=ERY;}
+      else{first=DOXY;alt='or '+CLARI+' PO';}
+      if(!pen)alt+=(alt?'<br>':'')+'Alternative chosen because atypical pathogens suspected.';
+    }else{first='Amoxicillin 500mg TDS PO';alt='Higher doses can be used (see BNF).';}
+    place='Usually discharge home with primary care-led care and safety-netting advice.';
+    micro='Microbiological tests not routinely needed.';
   }else if(curb===2){
-    if(allergy==='severe'){first='Levofloxacin 500mg OD PO/IV';}
-    else{first=allergy==='mild'?'Clarithromycin 500mg BD + co-trimoxazole (discuss pharmacy)':'Co-amoxiclav 625mg TDS PO / 1.2g TDS IV';second=atypical?'+ Clarithromycin 500mg BD PO/IV':'+ Clarithromycin 500mg BD if atypical features';}
-    duration='7 days';
+    if(pen){
+      if(c.pregnant){first=ERY;alt='Doxycycline is contraindicated in pregnancy.';}
+      else{first=DOXY;alt='or '+CLARI+' PO';}
+    }else{
+      first='Amoxicillin 500mg TDS PO';alt='Higher doses can be used (see BNF).';
+      if(c.atypical)first+=' <strong>+ '+(c.pregnant?ERY:CLARI+' PO')+'</strong>';
+      else extra.push('Add '+(c.pregnant?'erythromycin':'clarithromycin')+' if atypical pathogens suspected, particularly in Mycoplasma outbreak periods.');
+    }
+    if(c.iv)extra.push('If IV needed, give the IV form of the same agent (dose per BNF) and review by 48h for oral switch.');
+    place='Virtual ward, SDEC, hospital at home or inpatient care (shared decision).';
+    micro='Consider: blood cultures if sepsis suspected; sputum culture; pneumococcal urinary antigen (supports de-escalation); Legionella urinary antigen if risk factors.';
   }else{
-    if(allergy==='severe'){first='Levofloxacin 500mg BD IV or moxifloxacin 400mg OD IV';}
-    else{first=allergy==='mild'?'Ceftriaxone 2g OD IV + clarithromycin 500mg BD IV':'Co-amoxiclav 1.2g TDS IV + clarithromycin 500mg BD IV';second='Consider dexamethasone 6mg OD &times; 4 days in very severe (senior agreement).';}
-    duration='7–10 days';notes+='Senior/ITU review if CURB &ge;4. Blood cultures + pneumococcal/legionella urinary antigens. Physio. ';
+    if(pen){
+      if(c.pregnant){first='Discuss urgently with microbiology';alt='Fluoroquinolones are generally avoided in pregnancy; levofloxacin is the NICE allergy alternative outside pregnancy.';}
+      else{first='Levofloxacin 500mg BD PO/IV';alt='MHRA warning: serious, disabling and potentially irreversible adverse effects. Consult microbiology if a fluoroquinolone is not appropriate.';}
+    }else{
+      first=(c.iv?'Co-amoxiclav 1.2g TDS IV':'Co-amoxiclav 500/125mg TDS PO (or 1.2g TDS IV)')+' <strong>+ '+(c.pregnant?ERY:CLARI+' '+(c.iv?'IV':'PO/IV'))+'</strong>';
+    }
+    extra.push('<strong>Corticosteroids:</strong> consider adding for 4&ndash;7 days (or until discharge) if physiological instability, shock, profound hypoxia or mechanical ventilation. IV hydrocortisone first-line; dexamethasone if hydrocortisone unsuitable.'+(pen&&!c.pregnant?' <strong>Avoid co-administering levofloxacin and corticosteroids</strong> (MHRA) &mdash; discuss with microbiology if both indicated.':''));
+    place='Inpatient care; consider critical care if appropriate. Senior review.';
+    micro='Consider: blood cultures if sepsis suspected; sputum culture; pneumococcal urinary antigen (supports de-escalation); Legionella urinary antigen if risk factors.';
   }
-  var warnRow=(hcap||aspiration||notes)?'<div style="background:var(--lamber);border-left:3px solid var(--amber);border-radius:7px;padding:9px 12px;font-size:13px;margin-bottom:10px">'+notes+'</div>':'';
+  if(c.aspiration)flags.push('<strong>Aspiration:</strong> NICE NG250 and the S&amp;W Formulary do not give a separate aspiration regimen &mdash; check UHP Microguide. Discuss with microbiology if lung abscess or empyema suspected. Arrange swallow assessment.');
+  if(c.resistant)flags.push('<strong>Resistant organism risk:</strong> review previous cultures and discuss with microbiology. If symptoms began &ge;48h after admission, this is hospital-acquired pneumonia &mdash; use HAP guidance, not this pathway.');
+
+  var box=function(title,body,bg){return '<div style="background:'+(bg||'white')+';border-radius:10px;padding:12px 14px;margin-bottom:10px;font-size:13px;line-height:1.55"><div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--slate);margin-bottom:5px">'+title+'</div>'+body+'</div>';};
+  var flagRow=flags.length?'<div style="background:var(--lamber);border-left:3px solid var(--amber);border-radius:7px;padding:9px 12px;font-size:13px;line-height:1.55;margin-bottom:10px">'+flags.join('<br><br>')+'</div>':'';
   out.innerHTML='<div style="background:'+sevBg+';border:2px solid '+sevCol+';border-radius:14px;padding:20px;margin-bottom:12px">'
-    +'<div style="font-size:16px;font-weight:700;color:'+sevCol+';margin-bottom:12px">'+sevLabel+'</div>'+warnRow
+    +'<div style="font-size:16px;font-weight:700;color:'+sevCol+';margin-bottom:12px">'+sevLabel+'</div>'+flagRow
     +'<div style="background:white;border-radius:10px;padding:14px;margin-bottom:10px">'
-    +'<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--slate);margin-bottom:6px">First-line regimen</div>'
+    +'<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--slate);margin-bottom:6px">'+(pen?'Penicillin allergy regimen':'First-line regimen')+'</div>'
     +'<div style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px">'+first+'</div>'
-    +(second?'<div style="font-size:13px;color:var(--slate);margin-top:4px">'+second+'</div>':'')
-    +'<div style="margin-top:8px;font-size:12px;color:var(--slate)"><strong>Duration:</strong> '+duration+' — review at 48h with cultures and clinical response.</div></div>'
-    +'<div style="background:var(--lrose);border-radius:8px;padding:10px 13px;font-size:12px;line-height:1.6"><strong>&#9888;&#65039; Always verify:</strong> allergy &middot; renal/hepatic function &middot; cultures &middot; COMPASS/Microguide for current UHP formulary &middot; de-escalate at 48h</div>'
-    +'<div style="margin-top:10px;font-size:11px;color:var(--slate);font-style:italic">BTS CAP 2009 &middot; NICE NG138 2019 &middot; UHP Local Antimicrobial Policy</div></div>';
+    +(alt?'<div style="font-size:13px;color:var(--slate);margin-top:4px">'+alt+'</div>':'')
+    +(extra.length?'<div style="font-size:13px;color:var(--navy);margin-top:8px;line-height:1.55">'+extra.join('<br>')+'</div>':'')
+    +'<div style="margin-top:8px;font-size:12px;color:var(--slate)"><strong>Duration:</strong> 5 days total, then stop unless microbiology suggests longer or the patient is not clinically stable. Start within 4h of presentation; oral first if able.</div></div>'
+    +box('Place of care',place)+box('Microbiology',micro)
+    +box('Review','IV antibiotics reviewed by 48h with oral switch where possible. If treatment failure is a concern, consider CRP or procalcitonin at day 3&ndash;4 &mdash; high or non-improving levels warrant senior review.')
+    +'<div style="background:var(--lrose);border-radius:8px;padding:10px 13px;font-size:12px;line-height:1.6"><strong>&#9888;&#65039; Always verify:</strong> allergy history &middot; pregnancy &middot; renal/hepatic function (BNF) &middot; previous cultures &middot; UHP Microguide</div>'
+    +'<div style="margin-top:10px;font-size:11px;color:var(--slate);font-style:italic">NICE NG250 (2025) &middot; South &amp; West Devon Formulary &middot; MHRA fluoroquinolone advice</div></div>';
   out.classList.remove('hidden');setTimeout(function(){panelScroll(out,'panel-abx');},120);
 };
 window.abxReset=function(){Object.keys(abxCritState).forEach(function(k){abxCritState[k]=false;var el=document.getElementById('abx-'+k),box=document.getElementById('abx-cb-'+k);if(el)el.classList.remove('checked');if(box)box.textContent='';});document.getElementById('abx-curb').value='';document.getElementById('abx-allergy').value='none';var out=document.getElementById('abx-outcome');out.classList.add('hidden');out.innerHTML='';panelTop('panel-abx');};
@@ -3926,18 +3952,21 @@ window.goldReset=function(){['gold-fev1','gold-ratio','gold-cat','gold-eos'].for
 <div style="background:white;border-radius:14px;padding:24px;box-shadow:0 4px 20px rgba(15,42,74,.09)">
 <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--slate);margin-bottom:6px">Evidence Summary</div>
 <h2 style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px">CAP Antibiotic Pathway</h2>
-<div style="font-size:12px;color:var(--slate);margin-bottom:16px">BTS CAP Guideline 2009 &middot; NICE NG138 2019 &middot; UHP Local Antimicrobial Policy &middot; Version 1.0 &middot; June 2025</div>
+<div style="font-size:12px;color:var(--slate);margin-bottom:16px">NICE NG250 2025 &middot; South &amp; West Devon Formulary &middot; UHP Microguide &middot; Version 2.0 &middot; October 2026</div>
 <div style="background:var(--lrose);border-left:3px solid var(--rose);border-radius:8px;padding:10px 12px;margin-bottom:14px;font-size:12px"><strong>&#9888;&#65039; Local formulary takes precedence.</strong> This tool provides guidance based on national guidelines. Always verify against current UHP/COMPASS/Microguide antimicrobial formulary before prescribing. Consult microbiology for complex cases.</div>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:0"><table style="width:100%;min-width:560px;border-collapse:collapse;font-size:12px">
 <tr><th style="background:var(--amber);color:white;padding:8px 10px;text-align:left">Component</th><th style="background:var(--amber);color:white;padding:8px 10px;text-align:left">Source</th><th style="background:var(--amber);color:white;padding:8px 10px;text-align:left">Evidence and application</th></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600;background:var(--lamber)">Low severity CAP (CURB 0&ndash;1)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">BTS 2009; NICE NG138 2019</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber)">Amoxicillin 500mg TDS PO for 5 days (no atypical features). Add clarithromycin 500mg BD if atypical features (gradual onset, dry cough, extrapulmonary features). Penicillin allergy: doxycycline 200mg loading then 100mg OD. 5-day course non-inferior to 7-day for low-severity CAP.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Moderate severity (CURB 2)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS 2009; NICE NG138 2019</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule)">Co-amoxiclav PO/IV + clarithromycin IV/PO. Beta-lactam/macrolide combination has Level A evidence for moderate CAP. Penicillin allergy: levofloxacin 500mg OD (dual coverage). Duration 7 days. De-escalate to oral at 48h if clinically improving.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">High severity (CURB &ge;3)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS 2009; IDSA/ATS 2007</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule)">IV co-amoxiclav + IV clarithromycin. ICU-level patients: consider adding dexamethasone 6mg OD &times; 4 days (RECOVERY evidence extrapolation — requires senior agreement). Duration 7&ndash;10 days. Blood cultures and urinary antigens (pneumococcal + legionella) before antibiotics. IDSA/ATS consensus: all high-severity patients should receive a beta-lactam + macrolide or respiratory fluoroquinolone.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Atypical organisms</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS 2009; Arnold FW et al. Chest 2007</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule)">Atypical organisms (Mycoplasma, Chlamydophila, Legionella) account for 20&ndash;30% of CAP. Legionella: levofloxacin preferred over macrolide alone (IDSA Grade B). Mycoplasma: macrolide or tetracycline. Atypical features: insidious onset, dry cough, prominent headache or GI symptoms, bilateral infiltrates, young patient, travel history.</td></tr>
-<tr><td style="padding:8px 10px;font-weight:600">Antibiotic stewardship</td><td style="padding:8px 10px;font-style:italic;color:var(--slate)">NICE NG15 2015; PHE guidance</td><td style="padding:8px 10px">Review antibiotics at 48h using CRP trend, culture sensitivities, and clinical response. CRP falling &gt;50% at 72h is associated with good outcomes. De-escalate from IV to oral at 48h if stable and tolerating oral intake — OPAT pathway if required. 5-day courses adequate for low-severity CAP; limit duration to avoid C. difficile and resistance.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">Local alignment</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">South &amp; West Devon Formulary</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">The S&amp;W formulary CAP chapter directs prescribers to NICE guidance for bacterial CAP. NICE NG250 (2025) replaced NG138 and NG139. UHP Microguide holds inpatient-specific detail.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Low severity (CURB 0&ndash;1)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">NICE NG250</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);">Amoxicillin 500mg TDS PO (higher doses per BNF). If penicillin allergy, amoxicillin unsuitable, or atypicals suspected: doxycycline 200mg day 1 then 100mg OD, or clarithromycin 500mg BD; erythromycin 500mg QDS in pregnancy. Microbiology not routinely needed.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">Moderate severity (CURB 2)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">NICE NG250</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">Amoxicillin 500mg TDS PO, plus clarithromycin 500mg BD (erythromycin in pregnancy) if atypicals suspected. Penicillin allergy: doxycycline or clarithromycin. Co-amoxiclav and fluoroquinolones are not first-line at this severity.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">High severity (CURB &ge;3)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">NICE NG250; MHRA</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);">Co-amoxiclav 500/125mg TDS PO or 1.2g TDS IV, plus clarithromycin 500mg BD PO/IV (erythromycin in pregnancy). Penicillin allergy: levofloxacin 500mg BD PO/IV, consulting microbiology if a fluoroquinolone is not appropriate. Levofloxacin carries MHRA warnings.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">Corticosteroids</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">NICE NG250; Dequin et al. NEJM 2023 (CAPE COD)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">In high-severity CAP (physiological instability, shock, profound hypoxia, mechanical ventilation) consider corticosteroids for 4&ndash;7 days or until discharge. IV hydrocortisone first; dexamethasone if unsuitable. Avoid co-administration with fluoroquinolones (MHRA).</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Duration and route</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">NICE NG250</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);">Start within 4h of presentation. Oral first where possible. Review IV by 48h and switch to oral. Stop after 5 days total unless microbiology indicates longer or the patient is not clinically stable.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">Atypicals and Mycoplasma</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">NICE NG250</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">Mycoplasma pneumoniae outbreaks occur roughly every 4 years; local surveillance should inform whether to add a macrolide in moderate severity. Review once microbiology results are available.</td></tr>
+<tr><td style="padding:8px 10px;font-weight:600">Review and stewardship</td><td style="padding:8px 10px;font-style:italic;color:var(--slate)">NICE NG250; NICE NG15</td><td style="padding:8px 10px;">Consider CRP or procalcitonin at day 3&ndash;4 if treatment failure is a concern. Pneumococcal urinary antigen supports de-escalation. Legionella antigen if risk factors. HAP (onset &ge;48h after admission) and aspiration fall outside this pathway &mdash; use UHP Microguide.</td></tr>
 </table></div>
-<div style="background:var(--lamber);border-radius:8px;padding:10px 12px;margin-top:14px;font-size:11px;color:var(--amber);font-weight:600">&#9888;&#65039; Working draft &mdash; requires consultant approval before clinical use. Always verify against current UHP local formulary. Review date: June 2026.</div>
-<div style="background:var(--mist);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:10px;color:var(--slate);font-style:italic">BTS CAP Guideline 2009 | NICE NG138 2019 | IDSA/ATS CAP Guidelines 2007 | Arnold FW et al. Chest 2007;131:1028 | UHP Local Antimicrobial Policy (COMPASS/Microguide) | NICE NG15 Antimicrobial Stewardship 2015</div>
+<div style="background:var(--lamber);border-radius:8px;padding:10px 12px;margin-top:14px;font-size:11px;color:var(--amber);font-weight:600">&#9888;&#65039; Working draft &mdash; requires consultant approval before clinical use. Always verify against current UHP local formulary. Review date: October 2027.</div>
+<div style="background:var(--mist);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:10px;color:var(--slate);font-style:italic">NICE NG250 Pneumonia: diagnosis and management 2025 | South &amp; West Devon Formulary, CAP chapter | MHRA Drug Safety Update: fluoroquinolones | Dequin PF et al. NEJM 2023;388:1931 | NICE NG15 Antimicrobial Stewardship 2015 | UHP Microguide</div>
 </div></div>
 </div>
 
@@ -4123,7 +4152,7 @@ document.getElementById('manifest-link').href = URL.createObjectURL(_mb);
 
 // Service worker
 if ('serviceWorker' in navigator) {
-  var sw = "const C='uhp-resp-v3.6';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
+  var sw = "const C='uhp-resp-v3.7';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
   navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw], {type:'application/javascript'}))).catch(function(){});
 }
 
