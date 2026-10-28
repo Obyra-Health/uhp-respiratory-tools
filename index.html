@@ -589,9 +589,9 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
           </div>
           <div class="tc" style="border-top:4px solid var(--rose)" onclick="showTab('asthma')">
             <div class="tc-icon">🫁</div>
-            <div class="tc-title">Acute Asthma Severity</div>
-            <div class="tc-desc">BTS/SIGN 2024 severity classification. Moderate to near-fatal. MgSO&#8324; and ITU escalation.</div>
-            <span class="tc-tag" style="background:var(--lrose);color:var(--rose)">BTS/SIGN 2024</span>
+            <div class="tc-title">Acute Asthma (Adults)</div>
+            <div class="tc-desc">UHP acute severe asthma pathway. Severity from features or PEF, stepwise treatment, magnesium and aminophylline dosing.</div>
+            <span class="tc-tag" style="background:var(--lrose);color:var(--rose)">UHP pathway &middot; BTS/SIGN 158</span>
             <button onclick="event.stopPropagation();showTab('asthma-ev')" style="margin-top:10px;padding:5px 12px;border-radius:6px;border:1px solid var(--rule);background:var(--mist);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--slate)">&#128202; Evidence</button>
           </div>
           <div class="tc" style="border-top:4px solid var(--teal)" onclick="showTab('o2')">
@@ -1473,47 +1473,78 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
 <div class="panel" id="panel-asthma">
   <div class="panel-subhdr">
     <button class="back-home-btn" onclick="showTab('home')">&#8592;</button>
-    <h3>🫁 Acute Asthma Severity</h3>
-    <button class="panel-reset" onclick="resetAsthma()">&#8634; Reset</button><button class="ev-btn" onclick="showTab(\'asthma-ev\')">&#128218; Ev</button>
+    <h3>🫁 Acute Asthma (Adults)</h3>
+    <button class="panel-reset" onclick="resetAsthma()">&#8634; Reset</button><button class="ev-btn" onclick="showTab('asthma-ev')">&#128218; Ev</button>
   </div>
   <div class="panel-content">
-
-<div style="background:var(--lblue);border-left:3px solid var(--blue);border-radius:9px;padding:12px 14px;margin-bottom:16px;font-size:13px">
-  <strong>Severity is determined by the worst single feature present.</strong> Work through each level and select the highest that applies.
-  <br><span style="font-size:11px;font-style:italic">BTS/SIGN 2024 (SIGN 158) | NICE NG244 2024</span>
+<div style="background:var(--lblue);border-left:3px solid var(--blue);border-radius:9px;padding:12px 14px;margin-bottom:14px;font-size:13px;line-height:1.6">
+  <strong>UHP acute severe asthma pathway.</strong> Tick every feature present &mdash; severity is set by the worst one. Severe breathlessness, tachypnoea, tachycardia, silent chest, cyanosis or collapse are <em>not specific, and their absence does not exclude a severe attack</em>.
+  <br><span style="font-size:11px;font-style:italic">UHP Management of acute severe asthma in adults &middot; BTS/SIGN 158</span>
 </div>
-<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
-  <div id="ast-moderate" onclick="astSelect('moderate')" style="display:flex;align-items:stretch;border-radius:9px;overflow:hidden;border:2px solid var(--rule);cursor:pointer;transition:border-color .15s">
-    <div style="width:48px;background:#2E7D32;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:white;flex-shrink:0">M</div>
-    <div style="padding:10px 13px;background:var(--mist)">
-      <div style="font-size:13px;font-weight:600;color:#2E7D32">Moderate Acute Asthma</div>
-      <div style="font-size:12px;color:var(--slate);margin-top:2px">PEFR 50–75% · Increasing symptoms · No severe features</div>
-    </div>
-  </div>  <div id="ast-severe" onclick="astSelect('severe')" style="display:flex;align-items:stretch;border-radius:9px;overflow:hidden;border:2px solid var(--rule);cursor:pointer;transition:border-color .15s">
-    <div style="width:48px;background:#B85C00;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:white;flex-shrink:0">S</div>
-    <div style="padding:10px 13px;background:var(--mist)">
-      <div style="font-size:13px;font-weight:600;color:#B85C00">Acute Severe Asthma</div>
-      <div style="font-size:12px;color:var(--slate);margin-top:2px">Any one of: PEFR 33–50% · RR ≥25 · HR ≥110 · Unable to complete sentences</div>
-    </div>
-  </div>  <div id="ast-lifethreat" onclick="astSelect('lifethreat')" style="display:flex;align-items:stretch;border-radius:9px;overflow:hidden;border:2px solid var(--rule);cursor:pointer;transition:border-color .15s">
-    <div style="width:48px;background:#8B1F3F;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:white;flex-shrink:0">LT</div>
-    <div style="padding:10px 13px;background:var(--mist)">
-      <div style="font-size:13px;font-weight:600;color:#8B1F3F">Life-Threatening Asthma</div>
-      <div style="font-size:12px;color:var(--slate);margin-top:2px">Any one of: PEFR <33% · SpO₂ <92% · Normal pCO₂ · Silent chest · Cyanosis · Altered consciousness · Hypotension</div>
-    </div>
-  </div>  <div id="ast-nearfatal" onclick="astSelect('nearfatal')" style="display:flex;align-items:stretch;border-radius:9px;overflow:hidden;border:2px solid var(--rule);cursor:pointer;transition:border-color .15s">
-    <div style="width:48px;background:#1a0a0a;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;color:white;flex-shrink:0">NF</div>
-    <div style="padding:10px 13px;background:var(--mist)">
-      <div style="font-size:13px;font-weight:600;color:#7F1D1D">Near-Fatal Asthma</div>
-      <div style="font-size:12px;color:var(--slate);margin-top:2px">Raised pCO₂ AND/OR requiring mechanical ventilation</div>
-    </div>
+<div style="background:white;border-radius:14px;padding:16px;box-shadow:0 2px 12px rgba(15,42,74,.08);margin-bottom:12px">
+  <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">Peak flow <span style="font-size:12px;font-weight:400;color:var(--slate)">(optional &mdash; ticks the PEF band for you)</span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Current PEF (L/min)</label><input id="ash-pef" type="number" min="30" max="900" placeholder="e.g. 180" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" oninput="ashPef()"></div>
+    <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Best or predicted PEF (L/min)</label><input id="ash-pefbest" type="number" min="100" max="900" placeholder="e.g. 450" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" oninput="ashPef()"></div>
   </div>
+  <div id="ash-pefres" style="font-size:13px;margin-top:8px;color:var(--slate)"></div>
 </div>
-<div id="ast-outcome" class="hidden"></div>
-<div style="background:var(--lpurp,#EAE6F8);border-radius:8px;padding:10px 13px;margin-top:14px;font-size:12px;line-height:1.5">
-  📄 <strong>Evidence:</strong> MgSO₄ 1.2–2g IV in life-threatening asthma: NNT 9 to prevent admission (Goodacre et al, Lancet 2013). NIV is an absolute contraindication in asthma on respiratory wards (UHP NIV SOP; BTS/ICS 2016).
+<div style="border:2px solid #2E7D32;border-radius:12px;padding:12px 12px 6px;margin-bottom:10px;background:white">
+<div style="font-size:14px;font-weight:700;color:#2E7D32;margin-bottom:2px">Moderate asthma</div>
+<div style="font-size:12px;color:var(--slate);margin-bottom:8px">Increasing symptoms with no features of acute severe asthma.</div>
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:6px">
+<div class="crit" id="ash-m-sym" onclick="ashToggle('m-sym')"><div class="cbox" id="ash-cb-m-sym"></div><div class="ct"><div class="cl">Increasing symptoms</div></div></div>
+<div class="crit" id="ash-m-pef" onclick="ashToggle('m-pef')"><div class="cbox" id="ash-cb-m-pef"></div><div class="ct"><div class="cl">PEF &gt;50% best or predicted</div></div></div>
+</div></div>
+<div style="border:2px solid #B85C00;border-radius:12px;padding:12px 12px 6px;margin-bottom:10px;background:white">
+<div style="font-size:14px;font-weight:700;color:#B85C00;margin-bottom:2px">Acute severe asthma</div>
+<div style="font-size:12px;color:var(--slate);margin-bottom:8px">If <strong>any</strong> of the following:</div>
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:6px">
+<div class="crit" id="ash-s-pef" onclick="ashToggle('s-pef')"><div class="cbox" id="ash-cb-s-pef"></div><div class="ct"><div class="cl">PEF 33&ndash;50% best or predicted</div></div></div>
+<div class="crit" id="ash-s-rr" onclick="ashToggle('s-rr')"><div class="cbox" id="ash-cb-s-rr"></div><div class="ct"><div class="cl">RR &ge;25/min</div></div></div>
+<div class="crit" id="ash-s-hr" onclick="ashToggle('s-hr')"><div class="cbox" id="ash-cb-s-hr"></div><div class="ct"><div class="cl">HR &ge;110/min</div></div></div>
+<div class="crit" id="ash-s-sent" onclick="ashToggle('s-sent')"><div class="cbox" id="ash-cb-s-sent"></div><div class="ct"><div class="cl">Unable to complete sentences in one breath</div></div></div>
+</div></div>
+<div style="border:2px solid #8B1F3F;border-radius:12px;padding:12px 12px 6px;margin-bottom:10px;background:white">
+<div style="font-size:14px;font-weight:700;color:#8B1F3F;margin-bottom:2px">Life-threatening asthma</div>
+<div style="font-size:12px;color:var(--slate);margin-bottom:8px">If <strong>any</strong> of the following. <em>Patients with severe or life-threatening features may not be distressed.</em></div>
+<div style="display:flex;flex-direction:column;gap:6px;margin-bottom:6px">
+<div class="crit" id="ash-l-pef" onclick="ashToggle('l-pef')"><div class="cbox" id="ash-cb-l-pef"></div><div class="ct"><div class="cl">PEF &lt;33% best or predicted</div></div></div>
+<div class="crit" id="ash-l-spo2" onclick="ashToggle('l-spo2')"><div class="cbox" id="ash-cb-l-spo2"></div><div class="ct"><div class="cl">SpO&#8322; &lt;92%</div></div></div>
+<div class="crit" id="ash-l-gas" onclick="ashToggle('l-gas')"><div class="cbox" id="ash-cb-l-gas"></div><div class="ct"><div class="cl">PaO&#8322; &lt;8 kPa or normal PaCO&#8322; (4.6&ndash;6.0 kPa)</div></div></div>
+<div class="crit" id="ash-l-silent" onclick="ashToggle('l-silent')"><div class="cbox" id="ash-cb-l-silent"></div><div class="ct"><div class="cl">Silent chest</div></div></div>
+<div class="crit" id="ash-l-cyan" onclick="ashToggle('l-cyan')"><div class="cbox" id="ash-cb-l-cyan"></div><div class="ct"><div class="cl">Cyanosis</div></div></div>
+<div class="crit" id="ash-l-effort" onclick="ashToggle('l-effort')"><div class="cbox" id="ash-cb-l-effort"></div><div class="ct"><div class="cl">Poor respiratory effort</div></div></div>
+<div class="crit" id="ash-l-arrh" onclick="ashToggle('l-arrh')"><div class="cbox" id="ash-cb-l-arrh"></div><div class="ct"><div class="cl">Arrhythmia</div></div></div>
+<div class="crit" id="ash-l-exh" onclick="ashToggle('l-exh')"><div class="cbox" id="ash-cb-l-exh"></div><div class="ct"><div class="cl">Exhaustion, altered conscious level</div></div></div>
+<div class="crit" id="ash-l-hypo" onclick="ashToggle('l-hypo')"><div class="cbox" id="ash-cb-l-hypo"></div><div class="ct"><div class="cl">Hypotension</div></div></div>
+<div class="crit" id="ash-nf-co2" onclick="ashToggle('nf-co2')"><div class="cbox" id="ash-cb-nf-co2"></div><div class="ct"><div class="cl">&uarr; PaCO&#8322; &mdash; indicates <strong>near-fatal asthma</strong></div></div></div>
+</div></div>
+<div style="background:white;border-radius:12px;padding:14px;box-shadow:0 2px 10px rgba(15,42,74,.08);margin-bottom:12px">
+  <label style="font-size:13px;font-weight:600;color:var(--navy);display:block;margin-bottom:6px">Response to immediate treatment</label>
+  <select id="ash-resp" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" onchange="ashCalc()">
+    <option value="">Not yet reassessed</option>
+    <option value="improving">Improving</option>
+    <option value="fail">Failure to improve with immediate treatment</option>
+    <option value="worse">Deteriorating despite treatment</option>
+  </select>
 </div>
-
+<div id="ash-outcome" class="hidden"></div>
+<div style="background:white;border-radius:14px;padding:16px;box-shadow:0 2px 12px rgba(15,42,74,.08);margin-top:12px">
+  <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px">Aminophylline calculator</div>
+  <div style="font-size:12px;color:var(--slate);margin-bottom:10px"><strong>Senior clinicians only.</strong> Weight-based. In obesity, consider dosing on ideal rather than actual body weight.</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+    <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Actual weight (kg)</label><input id="amin-wt" type="number" min="30" max="250" placeholder="e.g. 70" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" oninput="aminCalc()"></div>
+    <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Height (cm) <span style="font-size:11px">for ideal weight</span></label><input id="amin-ht" type="number" min="130" max="220" placeholder="optional" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" oninput="aminCalc()"></div>
+    <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Sex</label><select id="amin-sex" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" onchange="aminCalc()"><option value="">Select...</option><option value="M">Male</option><option value="F">Female</option></select></div>
+    <div><label style="font-size:12px;color:var(--slate);display:block;margin-bottom:4px">Dose on</label><select id="amin-basis" style="width:100%;padding:9px 12px;border:2px solid var(--rule);border-radius:8px;font-size:14px;font-family:inherit;background:white" onchange="aminCalc()"><option value="actual">Actual weight</option><option value="ibw">Ideal body weight</option></select></div>
+  </div>
+<div class="crit" id="ash-a-theo" onclick="ashToggle('a-theo')"><div class="cbox" id="ash-cb-a-theo"></div><div class="ct"><div class="cl">On oral theophylline, or already had theophylline/aminophylline this admission</div><div class="cd">Omit the loading dose.</div></div></div>
+  <div id="amin-out" style="margin-top:10px"></div>
+</div>
+<div style="background:var(--lrose);border-radius:8px;padding:10px 13px;margin-top:12px;font-size:12px;line-height:1.5">
+  &#9888;&#65039; <strong>NIV is not indicated for asthma on the respiratory ward</strong> (UHP NIV SOP; BTS/ICS 2016). Escalate to ITU if ventilatory support may be needed.
+</div>
   </div>
 </div>
 
@@ -2684,24 +2715,25 @@ html.fs-xl .home-wrap .tc { padding: 18px !important; }
 <div class="panel" id="panel-asthma-ev">
   <div class="panel-subhdr">
     <button class="back-home-btn" onclick="showTab('home')">&#8592;</button>
-    <h3>🫁 Asthma Severity — Evidence</h3>
+    <h3>🫁 Acute Asthma — Evidence</h3>
   </div>
 <div style="max-width:860px;margin:0 auto;padding:20px 16px max(80px,calc(60px + env(safe-area-inset-bottom,0px)))">
 <div style="background:white;border-radius:14px;padding:24px;box-shadow:0 4px 20px rgba(15,42,74,.09)">
 <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--slate);margin-bottom:6px">Evidence Summary</div>
-<h2 style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px">Acute Asthma Severity Tool</h2>
-<div style="font-size:12px;color:var(--slate);margin-bottom:16px">BTS/SIGN 2024 &middot; NICE NG244 2024 &middot; Version 1.0 working draft &middot; May 2025</div>
+<h2 style="font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px">Acute Asthma (Adults)</h2>
+<div style="font-size:12px;color:var(--slate);margin-bottom:16px">UHP acute severe asthma pathway &middot; BTS/SIGN 158 &middot; Version 2.0 &middot; October 2026</div>
 <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:0"><table style="width:100%;min-width:560px;border-collapse:collapse;font-size:12px">
 <tr><th style="background:var(--rose);color:white;padding:8px 10px;text-align:left">Component</th><th style="background:var(--rose);color:white;padding:8px 10px;text-align:left">Source</th><th style="background:var(--rose);color:white;padding:8px 10px;text-align:left">Evidence and application</th></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600;background:var(--lamber);color:var(--amber)">Severity classification</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">BTS/SIGN 2024 (SIGN 158)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber)">Four-level classification: moderate (PEFR 50&ndash;75%), severe (PEFR 33&ndash;50% or any one of RR &ge;25, HR &ge;110, unable to complete sentences), life-threatening (&lt;33% or SpO&#8322; &lt;92%), near-fatal (raised pCO&#8322; or mechanical ventilation). Severity determined by worst single feature.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">IV Magnesium Sulphate</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">Goodacre et al. Lancet 2013 (MAGPAS)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule)">RCT n=1,109. IV MgSO&#8324; 1.2&ndash;2g over 20 min in life-threatening asthma: NNT 9 to prevent admission. Recommended in life-threatening and near-fatal asthma before ITU referral. BTS/SIGN 2024 Grade A recommendation.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600;background:var(--lrose);color:var(--rose)">NIV contraindication</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lrose);font-style:italic;color:var(--slate)">BTS/ICS 2016; UHP NIV SOP Dec 2023</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lrose)">NIV is an <strong>absolute contraindication</strong> in acute asthma on respiratory wards (both guidelines). ICU/HDU only if ventilatory support required. This is incorporated as an absolute exclusion in the UHP NIV SOP and the NIV Decision Tool.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Ipratropium addition</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">Stoodley et al. Cochrane 2012</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule)">Adding ipratropium to salbutamol in acute severe asthma reduces hospital admissions. Number needed to treat approximately 15 (NNT 15). Recommended in acute severe and life-threatening asthma.</td></tr>
-<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Ketamine for intubation</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS/SIGN 2024</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule)">Preferred induction agent in near-fatal asthma due to bronchodilatory properties. Propofol and thiopentone may worsen bronchospasm.</td></tr>
-<tr><td style="padding:8px 10px;font-weight:600">pCO&#8322; in near-fatal asthma</td><td style="padding:8px 10px;font-style:italic;color:var(--slate)">BTS/SIGN 2024; NICE NG244</td><td style="padding:8px 10px">Normal or raised pCO&#8322; in acute asthma is pre-terminal. Indicates respiratory fatigue and impending arrest. Immediate escalation to ITU/anaesthetics required. Post-intubation: permissive hypercapnia with long expiratory time.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">Local pathway</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">UHP Management of acute severe asthma in adults</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">Tool follows the UHP proforma: severity criteria, investigations, immediate treatment, escalation, ongoing care, magnesium and aminophylline dosing. Version and review date of the proforma to be confirmed.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Severity classification</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS/SIGN 158 (acute asthma section, 2019)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);">Moderate (PEF &gt;50%), acute severe (PEF 33&ndash;50%, RR &ge;25, HR &ge;110, unable to complete sentences), life-threatening (PEF &lt;33%, SpO&#8322; &lt;92%, PaO&#8322; &lt;8 kPa, normal PaCO&#8322;, silent chest, cyanosis, poor effort, arrhythmia, exhaustion, hypotension), near-fatal (raised PaCO&#8322;). The 2024 BTS/NICE/SIGN joint guideline (NG245) covers chronic asthma; acute management remains under SIGN 158.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">Bronchodilators</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">BTS/SIGN 158; Stoodley et al. Cochrane 2012</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">Oxygen-driven nebulised salbutamol; back-to-back dosing when response is poor. Adding ipratropium in acute severe asthma reduces admissions.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Corticosteroids</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS/SIGN 158</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);">Prednisolone 40&ndash;50mg daily, or hydrocortisone 100mg IV 6-hourly if oral route unavailable. Continue for at least 5 days.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-weight:600">IV magnesium sulphate</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);font-style:italic;color:var(--slate)">BTS/SIGN 158; Goodacre et al. Lancet Respir Med 2013 (3Mg)</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);background:var(--lamber);">Single dose 1.2&ndash;2g IV over 20 min in acute severe asthma not responding to initial treatment. UHP dose: 2g in 50ml 0.9% saline; not repeated without senior discussion.</td></tr>
+<tr><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-weight:600">Aminophylline</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);font-style:italic;color:var(--slate)">BTS/SIGN 158; UHP pathway</td><td style="padding:8px 10px;border-bottom:1px solid var(--rule);">Senior decision only; little additional benefit over standard care and narrow therapeutic index. Loading 5mg/kg (omit if on theophylline), maintenance 0.5mg/kg/hr, ideal body weight in obesity, daily levels 10&ndash;20 mg/L.</td></tr>
+<tr><td style="padding:8px 10px;background:var(--lamber);font-weight:600">NIV and ITU</td><td style="padding:8px 10px;background:var(--lamber);font-style:italic;color:var(--slate)">BTS/ICS 2016; UHP NIV SOP</td><td style="padding:8px 10px;background:var(--lamber);">NIV is not used for asthma on the respiratory ward. Life-threatening or deteriorating patients go to ITU accompanied by the ITU registrar. Ketamine is the preferred induction agent if intubation is needed.</td></tr>
 </table></div>
-<div style="background:var(--lamber);border-radius:8px;padding:10px 12px;margin-top:14px;font-size:11px;color:var(--amber);font-weight:600">&#9888;&#65039; Working draft &mdash; requires consultant approval before clinical use. Review date: June 2026.</div>
-<div style="background:var(--mist);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:10px;color:var(--slate);font-style:italic">BTS/SIGN Asthma Guideline 2024 (SIGN 158) | NICE NG244 2024 | Goodacre S et al. Lancet 2013;381:2112 | Stoodley RG et al. Cochrane Database 2012 | BTS/ICS NIV Guideline 2016</div>
+<div style="background:var(--lamber);border-radius:8px;padding:10px 12px;margin-top:14px;font-size:11px;color:var(--amber);font-weight:600">&#9888;&#65039; Working draft &mdash; requires consultant approval before clinical use. Review date: October 2027.</div>
+<div style="background:var(--mist);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:10px;color:var(--slate);font-style:italic">UHP Management of acute severe asthma in adults | BTS/SIGN 158 British guideline on the management of asthma | Goodacre S et al. Lancet Respir Med 2013;1:293 | Kew KM et al. Cochrane 2014 (IV magnesium) | BTS/ICS NIV Guideline 2016</div>
 </div></div>
 </div>
 <div class="panel" id="panel-cfs-ev">
@@ -4154,7 +4186,7 @@ document.getElementById('manifest-link').href = URL.createObjectURL(_mb);
 
 // Service worker
 if ('serviceWorker' in navigator) {
-  var sw = "const C='uhp-resp-v3.9';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
+  var sw = "const C='uhp-resp-v4.0';self.addEventListener('install',function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(['./'])}));self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(ks){return Promise.all(ks.filter(function(k){return k!==C}).map(function(k){return caches.delete(k)}))}));self.clients.claim()});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(r){return r||fetch(e.request)}))});";
   navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw], {type:'application/javascript'}))).catch(function(){});
 }
 
@@ -4335,27 +4367,88 @@ window.esdReset=function(){
 <script>
 
 (function(){
-var outcomes={
-  moderate:{cls:'go',icon:'🟡',title:'Moderate Acute Asthma',actions:['Salbutamol 5mg nebulised (air-driven) — repeat every 15–30 min','Ipratropium 0.5mg nebulised if inadequate response','Prednisolone 40–50mg oral (or hydrocortisone 100mg IV) — 5 days','Oxygen: target SpO₂ 94–98%','PEFR after treatment — step up if <75%','Discharge: PEFR ≥75%, SpO₂ ≥94%, symptoms controlled, follow-up within 2 working days'],evid:'Air-driven nebulisers preferred in asthma. Prednisolone 40mg and 50mg equivalent (BTS/SIGN 2024).'},
-  severe:{cls:'caution',icon:'🟠',title:'Acute Severe Asthma',actions:['Salbutamol 5mg nebulised — continuous if necessary','Ipratropium 0.5mg nebulised — add immediately','Prednisolone 40–50mg oral or hydrocortisone 100mg IV','Oxygen: target SpO₂ 94–98%','ABG if SpO₂ <92% — normal or raised pCO₂ = life-threatening','CXR to exclude pneumothorax','IV access and U&E (hypokalaemia risk)','Senior review within 30 minutes'],evid:'Ipratropium in acute severe asthma reduces admissions (Stoodley et al, Cochrane 2012).'},
-  lifethreat:{cls:'stop',icon:'🔴',title:'Life-Threatening Asthma',actions:['CALL ITU NOW — do not delay treatment while awaiting review','Continuous nebulised salbutamol 5–10mg/hr','Ipratropium 0.5mg nebulised every 4–6 hours','IV hydrocortisone 100mg every 6 hours','IV magnesium sulphate 1.2–2g over 20 minutes (single dose)','Oxygen: target SpO₂ 94–98%','Urgent ABG — raised pCO₂ = pre-terminal, escalate immediately','IV salbutamol 250 micrograms bolus if poor inhaled response','NIV is NOT indicated in asthma on respiratory ward'],evid:'MgSO₄ in life-threatening asthma: NNT 9 to prevent admission (Goodacre et al, Lancet 2013; MAGPAS trial).'},
-  nearfatal:{cls:'stop',icon:'🚨',title:'Near-Fatal Asthma — Immediate ITU',actions:['CALL ITU/ANAESTHETICS IMMEDIATELY','Continue all life-threatening treatments while ITU en route','Prepare for RSI — alert anaesthetics, airway equipment at bedside','Ketamine preferred induction agent (bronchodilatory properties)','Post-intubation: permissive hypercapnia, RR 8–10, long expiratory time','IV MgSO₄ if not already given'],evid:'Ketamine preferred over propofol/thiopentone in acute severe asthma (BTS/SIGN 2024). Raised pCO₂ in acute asthma is pre-terminal.'}
+var ashState={};
+function ashSet(k,on){ashState[k]=on;var el=document.getElementById('ash-'+k),b=document.getElementById('ash-cb-'+k);if(!el)return;if(on){el.classList.add('checked');b.textContent='✓';}else{el.classList.remove('checked');b.textContent='';}}
+window.ashToggle=function(k){ashSet(k,!ashState[k]);if(k==='a-theo'){aminCalc();return;}ashCalc();};
+window.ashPef=function(){
+  var c=parseFloat(document.getElementById('ash-pef').value),b=parseFloat(document.getElementById('ash-pefbest').value),r=document.getElementById('ash-pefres');
+  ['m-pef','s-pef','l-pef'].forEach(function(k){ashSet(k,false);});
+  if(isNaN(c)||isNaN(b)||b<=0){r.innerHTML='';ashCalc();return;}
+  var pct=c/b*100,k=pct<33?'l-pef':pct<=50?'s-pef':'m-pef';
+  ashSet(k,true);
+  var lab={'l-pef':['Life-threatening band','#8B1F3F'],'s-pef':['Acute severe band','#B85C00'],'m-pef':['Moderate band','#2E7D32']}[k];
+  r.innerHTML='PEF <strong style="font-size:15px;color:'+lab[1]+'">'+pct.toFixed(0)+'%</strong> of best/predicted &mdash; '+lab[0]+' ticked.'+(pct>75?' (&gt;75%: no PEF criterion for severity.)':'');
+  ashCalc();
 };
-window.astSelect=function(key){
-  document.querySelectorAll('[id^="ast-"]').forEach(function(el){el.style.borderColor='';});
-  document.getElementById('ast-'+key).style.borderColor='var(--blue)';
-  var o=outcomes[key];
-  var cols={go:'var(--green)',caution:'var(--amber)',stop:'var(--rose)'};
-  var bgs={go:'var(--lgreen)',caution:'var(--lamber)',stop:'var(--lrose)'};
-  var acts=o.actions.map(function(a){return '<li style="padding:3px 0 3px 16px;position:relative;font-size:13px;line-height:1.5"><span style="position:absolute;left:0;color:'+cols[o.cls]+'">→</span>'+a+'</li>';}).join('');
-  var r=document.getElementById('ast-outcome');
-  r.innerHTML='<div style="background:'+bgs[o.cls]+';border:2px solid '+cols[o.cls]+';border-radius:14px;padding:22px;animation:fadeIn .25s ease"><div style="font-size:32px;margin-bottom:10px">'+o.icon+'</div><div style="font-size:19px;font-weight:700;color:'+cols[o.cls]+';margin-bottom:8px">'+o.title+'</div><ul style="list-style:none;margin-bottom:12px">'+acts+'</ul><div style="background:rgba(0,0,0,.06);border-radius:8px;padding:10px 12px;font-size:12px;font-style:italic"><strong>Evidence:</strong> '+o.evid+'</div></div>';
-  r.classList.remove('hidden');
-  setTimeout(function(){panelScroll(r,'panel-asthma');},120);
+function box(title,col,bg,body){return '<div style="background:'+bg+';border:2px solid '+col+';border-radius:12px;padding:14px;margin-bottom:10px"><div style="font-size:14px;font-weight:700;color:'+col+';margin-bottom:8px">'+title+'</div>'+body+'</div>';}
+function list(items){return '<ul style="list-style:none;margin:0;padding:0">'+items.map(function(a){return '<li style="padding:3px 0 3px 22px;position:relative;font-size:13px;line-height:1.5"><span style="position:absolute;left:0">&#9744;</span>'+a+'</li>';}).join('')+'</ul>';}
+function sub(t){return '<div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--slate);margin:8px 0 4px">'+t+'</div>';}
+window.ashCalc=function(){
+  var any=function(pre){return Object.keys(ashState).some(function(k){return k.indexOf(pre)===0&&ashState[k];});};
+  var nf=!!ashState['nf-co2'],lt=nf||any('l-'),sv=any('s-'),md=any('m-');
+  var resp=document.getElementById('ash-resp').value,out=document.getElementById('ash-outcome');
+  if(!nf&&!lt&&!sv&&!md&&!resp){out.classList.add('hidden');out.innerHTML='';return;}
+  var lvl,col,bg;
+  if(nf){lvl='Near-fatal asthma';col='#7F1D1D';bg='var(--lrose)';}
+  else if(lt){lvl='Life-threatening asthma';col='#8B1F3F';bg='var(--lrose)';}
+  else if(sv){lvl='Acute severe asthma';col='#B85C00';bg='var(--lamber)';}
+  else if(md){lvl='Moderate asthma';col='#2E7D32';bg='var(--lgreen)';}
+  else{lvl='Severity not yet assessed';col='var(--slate)';bg='var(--mist)';}
+  var escalate=sv||lt||resp==='fail'||resp==='worse';
+  var itu=lt||resp==='worse';
+  var h='<div style="background:'+bg+';border:2px solid '+col+';border-radius:14px;padding:16px;margin-bottom:12px"><div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:'+col+'">Severity</div><div style="font-size:19px;font-weight:800;color:'+col+'">'+lvl+'</div>'
+    +(resp==='fail'&&!sv&&!lt?'<div style="font-size:13px;margin-top:6px">Failing to improve &mdash; treat as acute severe.</div>':'')
+    +(resp==='worse'&&!lt?'<div style="font-size:13px;margin-top:6px">Deteriorating despite treatment &mdash; manage as life-threatening.</div>':'')
+    +'</div>';
+  if(itu){
+    h+='<div style="background:#8B1F3F;color:white;border-radius:12px;padding:14px;margin-bottom:10px"><div style="font-size:15px;font-weight:800">'+(nf?'NEAR-FATAL &mdash; ':'')+'Urgent transfer to ITU, accompanied by the ITU registrar</div>'
+      +'<div style="font-size:13px;margin-top:4px;opacity:.95">ITU Registrar bleep 0110 (via switch). Give all treatment below while awaiting transfer.'+(nf?' Raised PaCO&#8322; indicates near-fatal asthma.':'')+'</div></div>';
+  }
+  h+=box('All patients','#2E7D32','white',
+     sub('Investigations')+list(['Peak flow (PEF)','Pulse oximetry','ABG if SpO&#8322; &lt;92% or clinical concern'+(lt?' &mdash; <strong>required</strong>':''),'Consider CXR','ECG','Theophylline level (if on oral treatment)'])
+    +sub('Immediate treatment')+list(['Oxygen &mdash; aim SpO&#8322; 94&ndash;98%','Nebulised salbutamol 2.5&ndash;5mg (via O&#8322;-driven nebuliser)','Prednisolone 40mg PO stat and OD<div style="font-size:12px;color:var(--slate)">If on maintenance prednisolone, increase to a minimum of 40mg OD &middot; tablets are dispersible in water if difficulty swallowing</div>','Hydrocortisone 100mg IV stat and 6-hourly if oral route unavailable'])
+    +sub('Monitoring')+'<div style="font-size:13px;line-height:1.6">Repeat PEF 15&ndash;30 min after starting treatment, then at least four times daily until stable. Repeat ABG within 1 hour if initial PaO&#8322; &lt;8 kPa, PaCO&#8322; normal or raised, or the patient is deteriorating.</div>');
+  if(escalate){
+    h+=box('Acute severe asthma or failure to improve &mdash; in addition','#B85C00','white',
+      list(['Back-to-back / repeated nebulised salbutamol 2.5mg','Nebulised ipratropium bromide 500 micrograms 4&ndash;6 hourly','IV magnesium sulphate <strong>2g in 50ml 0.9% saline over 20 min</strong><div style="font-size:12px;color:var(--slate)">Only if not already given by ED/ambulance. No second dose without senior discussion.</div>','Senior review: Medical Registrar (bleep 0308), ITU Registrar (bleep 0110), Consultant Physician, Respiratory Registrar/Consultant'])
+      +'<div style="font-size:12px;font-style:italic;color:var(--slate);margin-top:6px">Aminophylline infusion can be considered by senior clinicians &mdash; use the calculator below.</div>');
+  }
+  h+=box('Ongoing care','var(--navy)','var(--mist)',
+     sub('Treatment')+list(['Continue oxygen, aim SpO&#8322; 94&ndash;98%','Regular nebulisers prescribed and given; salbutamol 2.5mg PRN in addition','Monitor for and correct electrolyte disturbance (especially K&#8314;)'])
+    +sub('Document')+list(['Usual best or predicted peak flow','Peak flow pre and post nebuliser (Hexworthy or Honeyford ward for peak flow charts)'])
+    +sub('Ensure')+list(['Referral to asthma nurse specialist &mdash; ext 89173 or via SALUS (RINS icon)',itu?'Admission destination: ITU':'Admit to inpatient respiratory ward']));
+  h+='<div style="font-size:11px;color:var(--slate);font-style:italic;margin-bottom:4px">UHP Management of acute severe asthma in adults &middot; BTS/SIGN 158</div>';
+  out.innerHTML=h;out.classList.remove('hidden');
+  setTimeout(function(){panelScroll(out,'panel-asthma');},120);
+};
+window.aminCalc=function(){
+  var wt=parseFloat(document.getElementById('amin-wt').value),ht=parseFloat(document.getElementById('amin-ht').value),sex=document.getElementById('amin-sex').value,basis=document.getElementById('amin-basis').value,o=document.getElementById('amin-out');
+  if(isNaN(wt)){o.innerHTML='';return;}
+  var ibw=null;
+  if(!isNaN(ht)&&sex){ibw=(sex==='M'?50:45.5)+0.9055*(ht-152.4);ibw=Math.round(ibw*10)/10;}
+  var useW=wt,note='actual weight '+wt+'kg';
+  if(basis==='ibw'){
+    if(ibw===null){o.innerHTML='<div style="font-size:13px;color:var(--amber)">Enter height and sex to calculate ideal body weight.</div>';return;}
+    useW=Math.min(wt,ibw);note=ibw<wt?'ideal body weight '+ibw+'kg':'actual weight '+wt+'kg (lower than ideal body weight '+ibw+'kg)';
+  }
+  var load=5*useW,loadTxt;
+  var capped=load>500;if(capped)load=500;
+  load=Math.round(load/10)*10;
+  if(ashState['a-theo']){loadTxt='<strong>Omit loading dose</strong> &mdash; on oral theophylline or already had theophylline/aminophylline.';}
+  else{loadTxt='<strong>'+load+'mg</strong> aminophylline in 100ml 0.9% saline over 30 min'+(capped?' (capped at 500mg)':'')+(load<250?' <span style="color:var(--amber)">&mdash; below the usual 250&ndash;500mg range, check with senior/pharmacy</span>':'');}
+  var rate=Math.round(0.5*useW*10)/10;
+  o.innerHTML='<div style="background:var(--lamber);border-left:3px solid var(--amber);border-radius:8px;padding:12px;font-size:13px;line-height:1.6">'
+    +'<div style="font-size:12px;color:var(--slate);margin-bottom:6px">Dosing on '+note+(ibw!==null&&basis==='actual'?' &middot; IBW '+ibw+'kg':'')+'</div>'
+    +'<div><strong>Loading:</strong> 5mg/kg &rarr; '+loadTxt+'</div>'
+    +'<div style="margin-top:6px"><strong>Maintenance:</strong> 500mg aminophylline in 500ml 0.9% saline (1mg/ml) at 500 micrograms/kg/hr &rarr; <strong>'+rate+' ml/hr</strong></div>'
+    +'<div style="margin-top:6px"><strong>Monitoring:</strong> aminophylline levels daily, initial target 10&ndash;20 mg/L.</div></div>';
 };
 window.resetAsthma=function(){
-  document.querySelectorAll('[id^="ast-"]').forEach(function(el){el.style.borderColor='';});
-  var r=document.getElementById('ast-outcome');r.classList.add('hidden');r.innerHTML='';
+  Object.keys(ashState).forEach(function(k){ashSet(k,false);});
+  ['ash-pef','ash-pefbest','amin-wt','amin-ht'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('ash-resp').value='';document.getElementById('amin-sex').value='';document.getElementById('amin-basis').value='actual';
+  document.getElementById('ash-pefres').innerHTML='';document.getElementById('amin-out').innerHTML='';
+  var r=document.getElementById('ash-outcome');r.classList.add('hidden');r.innerHTML='';
   panelTop('panel-asthma');
 };
 })();
